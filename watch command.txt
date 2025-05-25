@@ -1,0 +1,17 @@
+PS C:\Users\charr\OneDrive - Premier Industrial Facility Solutions\Premier\Premier Website\Deepseek> 
+npx tailwindcss -i ./src/tailwind.css -o ./dist/styles.css --watch
+
+
+
+
+
+Get In Touch
+Phone
+(910) 512-5952
+Email
+info@premier-ifs.com
+Headquarters
+609-A Piner Rd Suite 182
+Wilmington, NC 28409
+Office Hours
+Monday-Friday: 8am-5pm EST
