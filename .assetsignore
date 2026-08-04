@@ -1,0 +1,14 @@
+node_modules/
+.git/
+.wrangler/
+.vscode/
+src/
+*.ps1
+*.md
+package.json
+package-lock.json
+postcss.config.js
+tailwind.config.js
+server.js
+.gitignore
+.assetsignore
