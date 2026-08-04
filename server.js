@@ -54,4 +54,22 @@ server.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);
     console.log(`To share on your local network, use your computer's IP address instead of localhost`);
     console.log(`Example: http://192.168.1.100:${port}/`);
+    console.log(`\nPress Ctrl+C to stop the server`);
+});
+
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+    console.log('\n\nShutting down server...');
+    server.close(() => {
+        console.log('Server stopped.');
+        process.exit(0);
+    });
+});
+
+process.on('SIGTERM', () => {
+    console.log('\n\nShutting down server...');
+    server.close(() => {
+        console.log('Server stopped.');
+        process.exit(0);
+    });
 });

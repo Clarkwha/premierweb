@@ -1,8 +1,7 @@
 $files = @(
     "warehouse-sanitation.html",
     "office-space-sanitation.html",
-    "food-processing-plant-cleaning.html",
-    "apply.html"
+    "food-processing-plant-cleaning.html"
 )
 
 foreach ($file in $files) {

@@ -4,7 +4,8 @@
   "description": "Premier Industrial Facility Solutions Website",
   "scripts": {
     "build": "postcss src/tailwind.css -o dist/styles.css",
-    "watch": "postcss src/tailwind.css -o dist/styles.css --watch"
+    "watch": "postcss src/tailwind.css -o dist/styles.css --watch",
+    "start": "node server.js"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",

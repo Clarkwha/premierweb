@@ -6,20 +6,25 @@ module.exports = {
     "./warehouse-sanitation.html",
     "./office-space-sanitation.html",
     "./food-processing-plant-cleaning.html",
-    "./apply.html"
+    "./custom-cleaning-programs.html",
+    "./brochure.html",
+    "./brochure2.html"
   ],
   theme: {
     extend: {
       colors: {
         'premier-blue': '#003366',
-        'premier-light-blue': '#E6F0F7',
-        'premier-gray': '#4A5568',
-        'premier-orange': '#F68B1F',
-        'premier-green': '#5B8C5A',
-        'premier-primary-green': '#00A651'
+        'premier-blue-vivid': '#0E39D2',
+        'premier-light-blue': '#EAF1FF',
+        'premier-gray': '#5C6470',
+        'premier-orange': '#00AE41',
+        'premier-green': '#048C35',
+        'premier-primary-green': '#00AE41',
+        'premier-mint': '#7EE8A8'
       },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],
+        heading: ['Montserrat', 'Arial', ...fontFamily.sans],
       },
     },
   },

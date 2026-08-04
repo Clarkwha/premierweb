@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Cleaning Programs - Premier Industrial Facility Solutions</title>
+    <meta name="description" content="Custom cleaning programs tailored to restaurants, gyms, retail, stadiums, offices, and healthcare facilities across the eastern United States.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="dist/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(120deg, rgba(14,57,210,.82) 0%, rgba(0,51,102,.88) 100%), url('Restaurant_Cleaning.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .area-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 30px -8px rgba(14,57,210,0.18);
+        }
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .mobile-menu.open {
+            max-height: 400px;
+        }
+    </style>
+</head>
+<body class="font-sans text-premier-gray bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="Premier_Logo.png" alt="Premier Industrial Facility Solutions" class="h-12">
+            </a>
+            <div class="hidden md:flex items-center space-x-7 font-heading">
+                <a href="index.html" class="text-premier-blue font-semibold text-sm hover:text-premier-orange">Home</a>
+                <a href="index.html#services" class="text-premier-blue font-semibold text-sm hover:text-premier-orange">Services</a>
+                <a href="index.html#about" class="text-premier-blue font-semibold text-sm hover:text-premier-orange">About</a>
+                <a href="index.html#careers" class="text-premier-blue font-semibold text-sm hover:text-premier-orange">Careers</a>
+                <a href="index.html#contact" class="text-premier-blue font-semibold text-sm hover:text-premier-orange">Contact</a>
+                <a href="index.html#contact" class="bg-premier-primary-green text-white px-5 py-2.5 rounded-lg font-bold text-sm hover:bg-premier-green transition-colors">Get a Free Assessment</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-premier-blue" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-premier-light-blue">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3 font-heading">
+                <a href="index.html" class="block py-2 text-premier-blue font-semibold hover:text-premier-orange">Home</a>
+                <a href="index.html#services" class="block py-2 text-premier-blue font-semibold hover:text-premier-orange">Services</a>
+                <a href="index.html#about" class="block py-2 text-premier-blue font-semibold hover:text-premier-orange">About</a>
+                <a href="index.html#careers" class="block py-2 text-premier-blue font-semibold hover:text-premier-orange">Careers</a>
+                <a href="index.html#contact" class="block py-2 text-premier-blue font-semibold hover:text-premier-orange">Contact</a>
+                <a href="index.html#contact" class="block bg-premier-primary-green text-white px-4 py-2 rounded-lg text-center font-bold hover:bg-premier-green mb-3">Get a Free Assessment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-28 md:py-40">
+        <div class="container mx-auto px-4 text-center">
+            <div class="font-heading font-bold text-xs md:text-sm tracking-widest uppercase text-premier-mint mb-4">Built Around Your Facility</div>
+            <h1 class="text-4xl md:text-5xl font-heading font-extrabold mb-6">Custom Cleaning Programs</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-blue-50">Tailored cleaning solutions designed specifically for your facility's unique needs.</p>
+            <a href="index.html#contact" class="inline-block bg-premier-primary-green hover:bg-premier-green text-white font-heading font-bold py-3 px-7 rounded-lg transition-colors">Get a Free Quote</a>
+        </div>
+    </section>
+
+    <!-- Trust Chip Strip -->
+    <div class="bg-white border-b border-gray-100">
+        <div class="container mx-auto px-4 py-5 flex flex-wrap justify-center gap-x-10 gap-y-3">
+            <div class="flex items-center gap-2 font-heading font-bold text-sm text-premier-blue">
+                <span class="w-5 h-5 rounded-full bg-premier-light-blue flex items-center justify-center"><i class="fas fa-check text-premier-green text-xs"></i></span>
+                Flexible Scheduling
+            </div>
+            <div class="flex items-center gap-2 font-heading font-bold text-sm text-premier-blue">
+                <span class="w-5 h-5 rounded-full bg-premier-light-blue flex items-center justify-center"><i class="fas fa-check text-premier-green text-xs"></i></span>
+                Trained &amp; Insured Staff
+            </div>
+            <div class="flex items-center gap-2 font-heading font-bold text-sm text-premier-blue">
+                <span class="w-5 h-5 rounded-full bg-premier-light-blue flex items-center justify-center"><i class="fas fa-check text-premier-green text-xs"></i></span>
+                Dedicated Account Manager
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Details -->
+    <section class="py-16 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Service Description -->
+                <div>
+                    <div class="font-heading font-bold text-xs tracking-widest uppercase text-premier-green mb-3">Why Choose Premier</div>
+                    <h2 class="text-3xl font-heading font-extrabold text-premier-blue mb-6">Customized Cleaning Solutions</h2>
+                    <p class="text-lg mb-8">At Premier IFS, we understand that every facility has unique cleaning requirements. Our custom cleaning programs are designed to meet your specific needs, whether you operate a small restaurant or a large industrial complex. We work closely with you to develop a cleaning plan that fits your schedule, budget, and operational requirements.</p>
+
+                    <div class="space-y-8">
+                        <!-- Benefits -->
+                        <div>
+                            <h3 class="text-2xl font-heading font-bold text-premier-blue mb-4">Why Choose a Custom Program?</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-premier-green mt-1 mr-2"></i>
+                                    <span class="text-lg">Personalized cleaning schedules that work around your operations</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-premier-green mt-1 mr-2"></i>
+                                    <span class="text-lg">Specialized cleaning protocols for your specific industry</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-premier-green mt-1 mr-2"></i>
+                                    <span class="text-lg">Flexible service options to meet your budget</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-premier-green mt-1 mr-2"></i>
+                                    <span class="text-lg">Regular quality assessments and program adjustments</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-premier-green mt-1 mr-2"></i>
+                                    <span class="text-lg">Dedicated account manager for consistent service</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Pricing panel -->
+                        <div class="bg-gradient-to-br from-premier-blue-vivid to-premier-blue rounded-xl p-6 text-white">
+                            <div class="font-heading font-bold text-xs tracking-widest uppercase text-premier-mint mb-2">Straightforward Pricing</div>
+                            <h4 class="text-xl font-heading font-extrabold mb-2">One Scope, One Rate, No Surprises</h4>
+                            <p class="text-sm text-blue-50">A clear, written scope of work &mdash; tailored to your facility &mdash; and a predictable rate agreed before we start, so budgeting your program is simple.</p>
+                        </div>
+
+                        <!-- Process -->
+                        <div>
+                            <h3 class="text-2xl font-heading font-bold text-premier-blue mb-4">Our Customization Process</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-4">
+                                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-premier-blue-vivid to-premier-green text-white font-heading font-extrabold flex items-center justify-center flex-none">1</div>
+                                    <div>
+                                        <div class="font-heading font-bold text-premier-blue">Facility Walkthrough</div>
+                                        <p class="text-sm">An on-site assessment of your space, schedule, and cleaning requirements.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-premier-blue-vivid to-premier-green text-white font-heading font-extrabold flex items-center justify-center flex-none">2</div>
+                                    <div>
+                                        <div class="font-heading font-bold text-premier-blue">Fixed-Price Scope of Work</div>
+                                        <p class="text-sm">A clear, written scope and price before any work begins &mdash; no surprises.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-premier-blue-vivid to-premier-green text-white font-heading font-extrabold flex items-center justify-center flex-none">3</div>
+                                    <div>
+                                        <div class="font-heading font-bold text-premier-blue">Execution &amp; Ongoing Support</div>
+                                        <p class="text-sm">Trained crews execute the plan, tracked and verified through our app.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Features -->
+                <div>
+                    <div class="font-heading font-bold text-xs tracking-widest uppercase text-premier-green mb-3">Who We Serve</div>
+                    <h2 class="text-3xl font-heading font-extrabold text-premier-blue mb-6">Facilities We Serve</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="area-card bg-white rounded-xl shadow-md p-6 transition-all duration-300">
+                            <h3 class="text-xl font-heading font-bold text-premier-blue mb-3">Restaurants &amp; Food Service</h3>
+                            <p class="text-premier-gray text-sm">From quick-service restaurants to fine dining establishments, we create food-safe cleaning programs that meet health code requirements.</p>
+                        </div>
+                        <div class="area-card bg-white rounded-xl shadow-md p-6 transition-all duration-300">
+                            <h3 class="text-xl font-heading font-bold text-premier-blue mb-3">Gyms &amp; Fitness Centers</h3>
+                            <p class="text-premier-gray text-sm">Specialized cleaning to maintain a hygienic environment for members, focusing on high-touch surfaces and equipment.</p>
+                        </div>
+                        <div class="area-card bg-white rounded-xl shadow-md p-6 transition-all duration-300">
+                            <h3 class="text-xl font-heading font-bold text-premier-blue mb-3">Grocery &amp; Retail Stores</h3>
+                            <p class="text-premier-gray text-sm">Comprehensive cleaning solutions for retail spaces, including floor care, restroom maintenance, and high-traffic area cleaning.</p>
+                        </div>
+                        <div class="area-card bg-white rounded-xl shadow-md p-6 transition-all duration-300">
+                            <h3 class="text-xl font-heading font-bold text-premier-blue mb-3">Stadiums &amp; Arenas</h3>
+                            <p class="text-premier-gray text-sm">Event-based cleaning programs designed to handle large crowds and maintain facility cleanliness between events.</p>
+                        </div>
+                        <div class="area-card bg-white rounded-xl shadow-md p-6 transition-all duration-300">
+                            <h3 class="text-xl font-heading font-bold text-premier-blue mb-3">Office Buildings</h3>
+                            <p class="text-premier-gray text-sm">Customized cleaning schedules to maintain professional workspaces with minimal disruption to business operations.</p>
+                        </div>
+                        <div class="area-card bg-white rounded-xl shadow-md p-6 transition-all duration-300">
+                            <h3 class="text-xl font-heading font-bold text-premier-blue mb-3">Healthcare Facilities</h3>
+                            <p class="text-premier-gray text-sm">Specialized cleaning protocols for medical offices, clinics, and healthcare environments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="bg-gradient-to-br from-premier-blue-vivid to-premier-blue text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-heading font-extrabold mb-6">Ready to Create Your Custom Cleaning Program?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto text-blue-50">Contact us today to discuss how we can create a cleaning solution tailored to your facility's specific needs.</p>
+            <a href="index.html#contact" class="bg-premier-primary-green hover:bg-premier-green text-white font-heading font-bold py-3 px-8 rounded-lg text-lg inline-block transition-colors">Get a Free Quote</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-premier-blue text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="Premier_Logo.png" alt="Premier Industrial Facility Solutions Logo" class="h-12 mb-4">
+                    <p class="mb-4">Professional cleaning services for commercial and industrial facilities.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-heading font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#home" class="hover:text-premier-mint">Home</a></li>
+                        <li><a href="index.html#about" class="hover:text-premier-mint">About Us</a></li>
+                        <li><a href="index.html#services" class="hover:text-premier-mint">Services</a></li>
+                        <li><a href="index.html#careers" class="hover:text-premier-mint">Careers</a></li>
+                        <li><a href="index.html#contact" class="hover:text-premier-mint">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-heading font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="warehouse-sanitation.html" class="hover:text-premier-mint">Warehouse Sanitation</a></li>
+                        <li><a href="office-space-sanitation.html" class="hover:text-premier-mint">Office Space Sanitation</a></li>
+                        <li><a href="food-processing-plant-cleaning.html" class="hover:text-premier-mint">Food Processing Plant Cleaning</a></li>
+                        <li><a href="custom-cleaning-programs.html" class="hover:text-premier-mint">Custom Cleaning Program</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-heading font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-2 text-premier-mint"></i>
+                            <span>(910) 232-5316</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-premier-mint"></i>
+                            <span>info@premier-ifs.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white border-opacity-20">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-blue-100">&copy; <span id="current-year"></span> Premier Industrial Facility Solutions. All rights reserved.</p>
+                    <div class="mt-4 md:mt-0">
+                        <a href="#" class="text-white hover:text-premier-mint mx-2">Privacy Policy</a>
+                        <span class="text-blue-300">|</span>
+                        <a href="#" class="text-white hover:text-premier-mint mx-2">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

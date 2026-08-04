@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premier Industrial Facility Solutions | Sanitation Solutions You Can Trust</title>
-    <meta name="description" content="North Carolina's premier industrial cleaning service specializing in food-distribution warehouses. FDA, BRC, and OSHA compliant sanitation solutions.">
-    <link href="/dist/styles.css" rel="stylesheet">
+    <meta name="description" content="North Carolina's premier industrial cleaning service specializing in food-distribution warehouses and food-processing plants. FDA, BRC, USDA, and OSHA compliant sanitation solutions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="dist/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Warehouse_1.jpg');
+            background-image: linear-gradient(120deg, rgba(14,57,210,.82) 0%, rgba(0,51,102,.88) 100%), url('wide_warehouse_interior_shot.png');
             background-size: cover;
-            background-position: center;
+            background-position: center 35%;
         }
-        
+
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 14px 30px -8px rgba(14,57,210,0.18);
         }
-        
+
+        .why-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 24px -6px rgba(14,57,210,0.14);
+        }
+
         .sr-only {
             position: absolute;
             width: 1px;
@@ -30,30 +38,44 @@
             white-space: nowrap;
             border: 0;
         }
-        
-        .testimonial-card {
-            transition: all 0.3s ease;
-        }
-        
-        .testimonial-card:hover {
-            border-color: #F68B1F;
-        }
-        
+
         .mobile-menu {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
         }
-        
+
         .mobile-menu.open {
-            max-height: 500px;
+            max-height: 600px;
         }
-        
+
         @media (min-width: 768px) {
             .service-card {
-                min-height: 420px;
+                min-height: 440px;
             }
         }
+
+        /* ---------- Dashboard mockup (Technology section) ---------- */
+        .db-card{border:1px solid #E2E6EC;border-radius:16px;overflow:hidden;box-shadow:0 18px 44px rgba(14,57,210,.14);background:#fff;}
+        .db-top{background:#0E39D2;color:#fff;padding:13px 18px;display:flex;align-items:center;justify-content:space-between;}
+        .db-top .dt{font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;}
+        .db-top .dots{display:flex;gap:6px;}
+        .db-top .dots i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.45);display:block;}
+        .db-body{padding:20px;}
+        .db-kpi-row{display:flex;gap:12px;margin-bottom:16px;}
+        .db-kpi{flex:1;background:#F5F7F9;border-radius:10px;padding:12px 13px;border:1px solid #eef1f4;text-align:center;}
+        .db-kpi .n{font-family:'Montserrat',sans-serif;font-weight:800;font-size:26px;color:#003366;line-height:1;}
+        .db-kpi .n.gr{color:#048C35;}
+        .db-kpi .kl{font-size:11px;color:#5C6470;margin-top:5px;text-transform:uppercase;letter-spacing:.04em;}
+        .db-bars{display:flex;align-items:flex-end;gap:10px;height:96px;padding:8px 0 0;}
+        .db-bars .bar{flex:1;border-radius:5px 5px 0 0;background:#0E39D2;}
+        .db-bars .bar.g{background:#00AE41;}
+        .db-prog{margin-top:16px;}
+        .db-prow{display:flex;align-items:center;gap:12px;margin-bottom:9px;}
+        .db-prow .pl{font-size:12px;color:#5C6470;width:150px;flex:none;}
+        .db-track{flex:1;height:8px;background:#eef1f4;border-radius:5px;overflow:hidden;}
+        .db-fill{display:block;height:100%;background:#00AE41;border-radius:5px;}
+        .miniquote{margin-top:20px;font-size:14.5px;line-height:1.55;color:#2c3a52;background:#fff;border-left:4px solid #00AE41;padding:13px 17px;border-radius:0 10px 10px 0;box-shadow:0 6px 18px rgba(14,57,210,.06);}
     </style>
 </head>
 <body class="font-sans text-premier-gray">
@@ -63,68 +85,95 @@
             <div class="flex items-center">
                 <img src="Premier_Logo.png" alt="Premier Industrial Facility Solutions Logo" class="h-12">
             </div>
-            
+
             <!-- Desktop Navigation -->
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="text-premier-blue font-medium hover:text-premier-green">Home</a>
-                <a href="#about" class="text-premier-blue font-medium hover:text-premier-green">About Us</a>
-                <a href="#services" class="text-premier-blue font-medium hover:text-premier-green">Services</a>
-                <a href="#careers" class="text-premier-blue font-medium hover:text-premier-green">Careers</a>
-                <a href="#contact" class="text-premier-blue font-medium hover:text-premier-green">Contact</a>
-                <a href="#contact" class="bg-premier-primary-green text-white px-4 py-2 rounded hover:bg-premier-green">Contact Us</a>
+            <div class="hidden md:flex items-center space-x-7 font-heading">
+                <a href="#home" class="text-premier-blue font-semibold text-sm hover:text-premier-orange">Home</a>
+                <a href="#about" class="text-premier-blue font-semibold text-sm hover:text-premier-orange">About</a>
+                <a href="#services" class="text-premier-blue font-semibold text-sm hover:text-premier-orange">Services</a>
+                <a href="#process" class="text-premier-blue font-semibold text-sm hover:text-premier-orange">Process</a>
+                <a href="#careers" class="text-premier-blue font-semibold text-sm hover:text-premier-orange">Careers</a>
+                <a href="#contact" class="text-premier-blue font-semibold text-sm hover:text-premier-orange">Contact</a>
+                <a href="#contact" class="bg-premier-primary-green text-white px-5 py-2.5 rounded-lg font-bold text-sm hover:bg-premier-green transition-colors">Get a Free Assessment</a>
             </div>
-            
+
             <!-- Mobile menu button -->
             <button id="mobile-menu-button" class="md:hidden text-premier-blue" aria-label="Toggle navigation menu">
                 <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
                 <span class="sr-only">Menu</span>
             </button>
         </div>
-        
+
         <!-- Mobile Navigation -->
         <div id="mobile-menu" class="mobile-menu md:hidden bg-premier-light-blue">
-            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
-                <a href="#home" class="block py-2 text-premier-blue font-medium hover:text-premier-orange">Home</a>
-                <a href="#about" class="block py-2 text-premier-blue font-medium hover:text-premier-orange">About Us</a>
-                <a href="#services" class="block py-2 text-premier-blue font-medium hover:text-premier-orange">Services</a>
-                <a href="#careers" class="block py-2 text-premier-blue font-medium hover:text-premier-orange">Careers</a>
-                <a href="#contact" class="block py-2 text-premier-blue font-medium hover:text-premier-orange">Contact</a>
-                <a href="#contact" class="block bg-premier-primary-green text-white px-4 py-2 rounded text-center hover:bg-premier-green mb-3">Contact Us</a>
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3 font-heading">
+                <a href="#home" class="block py-2 text-premier-blue font-semibold hover:text-premier-orange">Home</a>
+                <a href="#about" class="block py-2 text-premier-blue font-semibold hover:text-premier-orange">About</a>
+                <a href="#services" class="block py-2 text-premier-blue font-semibold hover:text-premier-orange">Services</a>
+                <a href="#process" class="block py-2 text-premier-blue font-semibold hover:text-premier-orange">Process</a>
+                <a href="#careers" class="block py-2 text-premier-blue font-semibold hover:text-premier-orange">Careers</a>
+                <a href="#contact" class="block py-2 text-premier-blue font-semibold hover:text-premier-orange">Contact</a>
+                <a href="#contact" class="block bg-premier-primary-green text-white px-4 py-2 rounded-lg text-center font-bold hover:bg-premier-green mb-3">Get a Free Assessment</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg text-white py-32 md:py-56">
-
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">Sanitation Solutions You Can Trust</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Professional industrial cleaning services for food-distribution warehouses</p>
+    <section id="home" class="hero-bg text-white py-28 md:py-44 relative">
+        <div class="container mx-auto px-4 text-center reveal relative z-10">
+            <div class="font-heading font-bold text-xs md:text-sm tracking-widest uppercase text-premier-mint mb-4">Trusted Across Warehouses &amp; Food-Processing Plants</div>
+            <h1 class="text-4xl md:text-6xl font-heading font-extrabold mb-6 leading-tight">Sanitation Solutions You Can Trust</h1>
+            <p class="text-lg md:text-2xl mb-8 max-w-3xl mx-auto text-blue-50">Professional cleaning and audit-ready technical sanitation programs for food-distribution warehouses and food-processing facilities across the eastern United States.</p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="#services" class="bg-premier-green hover:bg-premier-primary-green text-white font-bold py-3 px-6 rounded">Our Services</a>
-                <a href="#contact" class="bg-transparent hover:bg-white hover:text-premier-blue text-white font-bold py-3 px-6 border-2 border-white rounded">Contact Us</a>
+                <a href="#services" class="bg-premier-primary-green hover:bg-premier-green text-white font-heading font-bold py-3 px-7 rounded-lg transition-colors">Our Services</a>
+                <a href="#contact" class="bg-transparent hover:bg-white hover:text-premier-blue text-white font-heading font-bold py-3 px-7 border-2 border-white rounded-lg transition-colors">Get a Free Assessment</a>
             </div>
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-premier-blue mb-4">About Premier Industrial Facility Solutions</h2>
-                <div class="w-20 h-1 bg-premier-orange mx-auto mb-6"></div>
-                <p class="text-lg max-w-3xl mx-auto">Providing exceptional industrial cleaning services to the Carolina's food distribution and warehouse facilities since 2023.</p>
+    <!-- Trust Chip Strip -->
+    <div class="bg-white border-b border-gray-100">
+        <div class="container mx-auto px-4 py-5 flex flex-wrap justify-center gap-x-10 gap-y-3">
+            <div class="flex items-center gap-2 font-heading font-bold text-sm text-premier-blue">
+                <span class="w-5 h-5 rounded-full bg-premier-light-blue flex items-center justify-center"><i class="fas fa-check text-premier-green text-xs"></i></span>
+                24/7 Spill Response
             </div>
-            
-            <div class="flex flex-col md:flex-row gap-8">
+            <div class="flex items-center gap-2 font-heading font-bold text-sm text-premier-blue">
+                <span class="w-5 h-5 rounded-full bg-premier-light-blue flex items-center justify-center"><i class="fas fa-check text-premier-green text-xs"></i></span>
+                Trained &amp; Insured Staff
+            </div>
+            <div class="flex items-center gap-2 font-heading font-bold text-sm text-premier-blue">
+                <span class="w-5 h-5 rounded-full bg-premier-light-blue flex items-center justify-center"><i class="fas fa-check text-premier-green text-xs"></i></span>
+                Compliance-Focused Protocols
+            </div>
+            <div class="flex items-center gap-2 font-heading font-bold text-sm text-premier-blue">
+                <span class="w-5 h-5 rounded-full bg-premier-light-blue flex items-center justify-center"><i class="fas fa-check text-premier-green text-xs"></i></span>
+                Real-Time App Tracking
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4 reveal">
+            <div class="text-center mb-12">
+                <div class="font-heading font-bold text-xs tracking-widest uppercase text-premier-green mb-3">Who We Are</div>
+                <h2 class="text-3xl md:text-4xl font-heading font-extrabold text-premier-blue mb-4">About Premier Industrial Facility Solutions</h2>
+                <div class="w-16 h-1 bg-premier-green mx-auto mb-6 rounded-full"></div>
+                <p class="text-lg max-w-3xl mx-auto">Delivering reliable, high-quality sanitation services to food-distribution warehouses and food-processing facilities throughout the eastern United States.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-10 items-start">
                 <div class="md:w-1/2">
-                    <img src="Team_1.png" alt="Premier IFS Team" class="rounded-lg shadow-lg w-full">
+                    <div class="aspect-[4/3] w-full rounded-xl shadow-lg overflow-hidden">
+                        <img src="warehouse_team_in_action.png" alt="Premier IFS crew in branded PPE working in a warehouse aisle &mdash; two technicians reviewing a tablet, one operating a ride-on floor scrubber, and one dust-mopping the floor." class="w-full h-full object-cover">
+                    </div>
                 </div>
                 <div class="md:w-1/2">
-                    <h3 class="text-2xl font-bold text-premier-blue mb-4">Our Mission</h3>
+                    <h3 class="text-2xl font-heading font-bold text-premier-blue mb-4">Our Mission</h3>
                     <p class="mb-6">To deliver the highest standard of industrial cleaning services while maintaining strict compliance with food safety regulations and creating a safe working environment for our team and clients.</p>
-                    
-                    <h3 class="text-2xl font-bold text-premier-blue mb-4">Our Values</h3>
+
+                    <h3 class="text-2xl font-heading font-bold text-premier-blue mb-4">Our Values</h3>
                     <ul class="space-y-3 mb-6">
                         <li class="flex items-start">
                             <i class="fas fa-check-circle text-premier-green mt-1 mr-2"></i>
@@ -143,50 +192,14 @@
                             <span>Transparent communication with clients</span>
                         </li>
                     </ul>
-                    
-                    <div class="bg-premier-light-blue p-4 rounded-lg">
-                        <h4 class="font-bold text-premier-blue mb-2">Compliant with</h4>
+
+                    <div class="bg-premier-light-blue p-5 rounded-xl">
+                        <h4 class="font-heading font-bold text-premier-blue mb-3 text-sm uppercase tracking-wide">Compliant With</h4>
                         <div class="flex flex-wrap gap-3">
-                            <span class="bg-white px-3 py-1 rounded-full text-sm font-medium">BRC</span>
-                            <span class="bg-white px-3 py-1 rounded-full text-sm font-medium">FDA</span>
-                            <span class="bg-white px-3 py-1 rounded-full text-sm font-medium">OSHA</span>
-                            <span class="bg-white px-3 py-1 rounded-full text-sm font-medium">USDA</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Leadership Team -->
-            <div class="mt-16">
-                <h3 class="text-2xl font-bold text-premier-blue mb-8 text-center">Our Leadership Team</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Team Member 1 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <img src="Rob_Will.png" alt="Rob Williams" class="w-full h-64 object-cover">
-                        <div class="p-6">
-                            <h4 class="text-xl font-bold text-premier-blue">Rob Williams</h4>
-                            <p class="text-premier-orange font-medium mb-3">CEO</p>
-                            <p class="text-sm">Rob Williams is the founder and CEO of Premier Industrial Facility Solutions. With over 20 years of experience in the industrial cleaning industry, Rob has established Premier as a leading provider of comprehensive cleaning solutions for food distribution and warehouse facilities.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Team Member 2 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <img src="Matt_Will.png" alt="Matt Williams" class="w-full h-64 object-cover">
-                        <div class="p-6">
-                            <h4 class="text-xl font-bold text-premier-blue">Matt Williams</h4>
-                            <p class="text-premier-orange font-medium mb-3">Vice President of Sales</p>
-                            <p class="text-sm">Matt Williams is the Vice President of Sales at Premier Industrial Facility Solutions. With over 15 years of experience in the food distribution industry, Matt has a proven track record of driving sales growth and building strong relationships with clients.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Team Member 3 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <img src="Pat_Win.png" alt="Patrick Windham" class="w-full h-64 object-cover">
-                        <div class="p-6">
-                            <h4 class="text-xl font-bold text-premier-blue">Patrick Windham</h4>
-                            <p class="text-premier-orange font-medium mb-3">Vice President of Operations</p>
-                            <p class="text-sm">Patrick Windham is the Vice President of Operations at Premier Industrial Facility Solutions. With over 20 years of experience in the industrial cleaning industry, Patrick has a proven track record of driving operational excellence and ensuring compliance with food safety regulations.</p>
+                            <span class="bg-white px-4 py-1.5 rounded-full text-sm font-heading font-bold text-premier-blue shadow-sm">BRC</span>
+                            <span class="bg-white px-4 py-1.5 rounded-full text-sm font-heading font-bold text-premier-blue shadow-sm">FDA</span>
+                            <span class="bg-white px-4 py-1.5 rounded-full text-sm font-heading font-bold text-premier-blue shadow-sm">OSHA</span>
+                            <span class="bg-white px-4 py-1.5 rounded-full text-sm font-heading font-bold text-premier-blue shadow-sm">USDA</span>
                         </div>
                     </div>
                 </div>
@@ -195,53 +208,62 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-16 bg-premier-light-blue">
+    <section id="services" class="py-16 md:py-20 bg-premier-light-blue">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-premier-blue mb-4">Our Specialized Services</h2>
-                <div class="w-20 h-1 bg-premier-orange mx-auto mb-6"></div>
+            <div class="text-center mb-12 reveal">
+                <div class="font-heading font-bold text-xs tracking-widest uppercase text-premier-green mb-3">What We Do</div>
+                <h2 class="text-3xl md:text-4xl font-heading font-extrabold text-premier-blue mb-4">Our Specialized Services</h2>
+                <div class="w-16 h-1 bg-premier-green mx-auto mb-6 rounded-full"></div>
                 <p class="text-lg max-w-3xl mx-auto">Comprehensive cleaning solutions tailored to your facility's specific needs.</p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Service 1 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md service-card transition-all duration-300">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md service-card reveal transition-all duration-300">
                     <img src="Warehouse_2.png" alt="Warehouse Sanitation" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-premier-blue mb-3">Warehouse Sanitation</h3>
-                        <p class="mb-4">Complete cleaning of your entire warehouse facility, including floors, walls, and equipment to meet food safety standards.</p>
-                        <ul class="space-y-2 mb-4">
+                        <h3 class="text-xl font-heading font-bold text-premier-blue mb-3">Warehouse Sanitation</h3>
+                        <p class="mb-4 text-sm">Complete cleaning of your entire warehouse facility, including floors, walls, and equipment to meet food safety standards.</p>
+                        <ul class="space-y-2 mb-4 text-sm">
                             <li class="flex items-start">
                                 <i class="fas fa-check text-premier-green mt-1 mr-2"></i>
-                                <span>FDA-compliant cleaning protocols</span>
+                                <span>Storage slot cleaning and maintenance</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check text-premier-green mt-1 mr-2"></i>
-                                <span>Specialized equipment for large spaces</span>
+                                <span>Rapid spill response</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check text-premier-green mt-1 mr-2"></i>
-                                <span>Documented cleaning procedures</span>
+                                <span>Trash mitigation during selection process</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-premier-green mt-1 mr-2"></i>
+                                <span>Master cleaning schedules tailored to your facility</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-premier-green mt-1 mr-2"></i>
+                                <span>Dedicated on-site management</span>
                             </li>
                         </ul>
-                        <a href="warehouse-sanitation.html" class="text-premier-orange font-medium hover:underline">Learn More →</a>
+                        <a href="warehouse-sanitation.html" class="text-premier-green font-heading font-bold text-sm hover:underline">Learn More &rarr;</a>
                     </div>
                 </div>
-                
+
                 <!-- Service 2 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md service-card transition-all duration-300">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md service-card reveal transition-all duration-300">
                     <img src="Office_Space_1.png" alt="Office Space Sanitation" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-premier-blue mb-3">Office Space Sanitation</h3>
-                        <p class="mb-4">Specialized cleaning of office spaces to maintain hygiene and prevent the spread of germs and bacteria.</p>
-                        <ul class="space-y-2 mb-4">
+                        <h3 class="text-xl font-heading font-bold text-premier-blue mb-3">Office Space Sanitation</h3>
+                        <p class="mb-4 text-sm">Specialized cleaning of office spaces to maintain hygiene and prevent the spread of germs and bacteria.</p>
+                        <ul class="space-y-2 mb-4 text-sm">
                             <li class="flex items-start">
                                 <i class="fas fa-check text-premier-green mt-1 mr-2"></i>
-                                <span>Disinfection of high-touch surfaces (desks, doorknobs, phones, etc.)</span>
+                                <span>Disinfection of high-touch surfaces</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check text-premier-green mt-1 mr-2"></i>
-                                <span>Floor care including vacuuming, mopping, and spot cleaning</span>
+                                <span>Floor care including vacuuming and mopping</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check text-premier-green mt-1 mr-2"></i>
@@ -253,47 +275,55 @@
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check text-premier-green mt-1 mr-2"></i>
-                                <span>Flexible scheduling to avoid disruption to office operations</span>
+                                <span>Flexible scheduling to avoid disruption</span>
                             </li>
                         </ul>
-                        <a href="office-space-sanitation.html" class="text-premier-orange font-medium hover:underline">Learn More →</a>
+                        <a href="office-space-sanitation.html" class="text-premier-green font-heading font-bold text-sm hover:underline">Learn More &rarr;</a>
                     </div>
                 </div>
-                
+
                 <!-- Service 3 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md service-card transition-all duration-300">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md service-card reveal transition-all duration-300">
                     <img src="Food_Processing_2.png" alt="Food Processing Plant Cleaning" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-premier-blue mb-3">Food Processing Plant Cleaning</h3>
-                        <p class="mb-4">Expert cleaning of food-processing plants to ensure compliance with food safety regulations and prevent contamination.</p>
-                        <ul class="space-y-2 mb-4">
+                        <h3 class="text-xl font-heading font-bold text-premier-blue mb-3">Food Processing Plant Cleaning</h3>
+                        <p class="mb-4 text-sm">Beyond clean, audit-ready every day &mdash; site-specific SSOPs engineered around your equipment and production schedule.</p>
+                        <ul class="space-y-2 mb-4 text-sm">
                             <li class="flex items-start">
                                 <i class="fas fa-check text-premier-green mt-1 mr-2"></i>
                                 <span>Sanitizing of all food contact surfaces</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check text-premier-green mt-1 mr-2"></i>
-                                <span>Removal of debris and residue</span>
+                                <span>Removal of buildup, residue, and biofilm</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check text-premier-green mt-1 mr-2"></i>
-                                <span>Verification of cleaning effectiveness</span>
+                                <span>Site-specific, documented SSOPs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-premier-green mt-1 mr-2"></i>
+                                <span>High-standard, predictable pre-ops</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-premier-green mt-1 mr-2"></i>
+                                <span>Compliance with food safety regulations</span>
                             </li>
                         </ul>
-                        <a href="food-processing-plant-cleaning.html" class="text-premier-orange font-medium hover:underline">Learn More →</a>
+                        <a href="food-processing-plant-cleaning.html" class="text-premier-green font-heading font-bold text-sm hover:underline">Learn More &rarr;</a>
                     </div>
                 </div>
-                
+
                 <!-- Service 4 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md service-card transition-all duration-300">
-                    <img src="https://images.unsplash.com/photo-1581093057302-7b95811eacd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Custom Cleaning Programs" class="w-full h-48 object-cover">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md service-card reveal transition-all duration-300">
+                    <img src="Restaurant_Cleaning.jpg" alt="Custom Cleaning Programs" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-premier-blue mb-3">Custom Cleaning Programs</h3>
-                        <p class="mb-4">Tailored cleaning schedules and procedures designed specifically for your facility's needs and operational requirements.</p>
-                        <ul class="space-y-2 mb-4">
+                        <h3 class="text-xl font-heading font-bold text-premier-blue mb-3">Custom Cleaning Programs</h3>
+                        <p class="mb-4 text-sm">Tailored cleaning schedules and procedures designed specifically for your facility's needs and operational requirements.</p>
+                        <ul class="space-y-2 mb-4 text-sm">
                             <li class="flex items-start">
                                 <i class="fas fa-check text-premier-green mt-1 mr-2"></i>
-                                <span>Needs assessment</span>
+                                <span>Tailored to your facility's specific needs</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check text-premier-green mt-1 mr-2"></i>
@@ -301,10 +331,132 @@
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check text-premier-green mt-1 mr-2"></i>
-                                <span>Ongoing quality assurance</span>
+                                <span>Continuous improvement</span>
                             </li>
                         </ul>
-                        <a href="custom-cleaning-programs.html" class="text-premier-orange font-medium hover:underline">Learn More →</a>
+                        <a href="custom-cleaning-programs.html" class="text-premier-green font-heading font-bold text-sm hover:underline">Learn More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Who We Serve -->
+            <div class="mt-14 reveal">
+                <div class="text-center mb-6">
+                    <h3 class="font-heading font-bold text-xs tracking-widest uppercase text-premier-green">Who We Serve</h3>
+                </div>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="bg-white border border-blue-100 text-premier-blue px-4 py-2 rounded-full text-sm font-heading font-bold shadow-sm">Food-Distribution Warehouses</span>
+                    <span class="bg-white border border-blue-100 text-premier-blue px-4 py-2 rounded-full text-sm font-heading font-bold shadow-sm">Cold Storage &amp; Freezer Facilities</span>
+                    <span class="bg-white border border-blue-100 text-premier-blue px-4 py-2 rounded-full text-sm font-heading font-bold shadow-sm">Cross-Dock Terminals</span>
+                    <span class="bg-white border border-blue-100 text-premier-blue px-4 py-2 rounded-full text-sm font-heading font-bold shadow-sm">3PL &amp; Fulfillment Centers</span>
+                    <span class="bg-white border border-blue-100 text-premier-blue px-4 py-2 rounded-full text-sm font-heading font-bold shadow-sm">Protein Processing Facilities</span>
+                    <span class="bg-white border border-blue-100 text-premier-blue px-4 py-2 rounded-full text-sm font-heading font-bold shadow-sm">Bottling &amp; Packaging Plants</span>
+                    <span class="bg-white border border-blue-100 text-premier-blue px-4 py-2 rounded-full text-sm font-heading font-bold shadow-sm">Fresh Cut Processing</span>
+                    <span class="bg-white border border-blue-100 text-premier-blue px-4 py-2 rounded-full text-sm font-heading font-bold shadow-sm">Commercial Bakeries</span>
+                    <span class="bg-white border border-blue-100 text-premier-blue px-4 py-2 rounded-full text-sm font-heading font-bold shadow-sm">Food-Grade Storage Facilities</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process + Pricing Section -->
+    <section id="process" class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4 reveal">
+            <div class="text-center mb-12">
+                <div class="font-heading font-bold text-xs tracking-widest uppercase text-premier-green mb-3">How We Work</div>
+                <h2 class="text-3xl md:text-4xl font-heading font-extrabold text-premier-blue mb-4">A Proven Process, Built on Trust</h2>
+                <div class="w-16 h-1 bg-premier-green mx-auto mb-6 rounded-full"></div>
+                <p class="text-lg max-w-3xl mx-auto">From first walkthrough to ongoing service, every engagement follows the same transparent process.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-premier-light-blue rounded-xl p-6 border border-blue-100">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-premier-blue-vivid to-premier-green text-white font-heading font-extrabold flex items-center justify-center mb-4">1</div>
+                    <h3 class="font-heading font-bold text-premier-blue mb-2">Facility Walkthrough</h3>
+                    <p class="text-sm">An on-site assessment of your space, schedule, and sanitation requirements.</p>
+                </div>
+                <div class="bg-premier-light-blue rounded-xl p-6 border border-blue-100">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-premier-blue-vivid to-premier-green text-white font-heading font-extrabold flex items-center justify-center mb-4">2</div>
+                    <h3 class="font-heading font-bold text-premier-blue mb-2">Fixed-Price Scope of Work</h3>
+                    <p class="text-sm">A clear, written scope and price before any work begins &mdash; no surprises.</p>
+                </div>
+                <div class="bg-premier-light-blue rounded-xl p-6 border border-blue-100">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-premier-blue-vivid to-premier-green text-white font-heading font-extrabold flex items-center justify-center mb-4">3</div>
+                    <h3 class="font-heading font-bold text-premier-blue mb-2">Execution &amp; Ongoing Support</h3>
+                    <p class="text-sm">Trained crews execute the plan, tracked and verified through our app.</p>
+                </div>
+            </div>
+
+            <div class="max-w-3xl mx-auto bg-gradient-to-br from-premier-blue-vivid to-premier-blue rounded-2xl p-8 md:p-10 text-white text-center">
+                <div class="font-heading font-bold text-xs tracking-widest uppercase text-premier-mint mb-3">Straightforward Pricing</div>
+                <h3 class="text-2xl md:text-3xl font-heading font-extrabold mb-3">One Scope, One Rate, No Surprises</h3>
+                <p class="text-blue-50 max-w-xl mx-auto">A clear, written scope of work and a predictable weekly rate agreed before we start &mdash; so budgeting your sanitation program is simple.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="py-16 md:py-20 bg-premier-light-blue">
+        <div class="container mx-auto px-4 reveal">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="font-heading font-bold text-xs tracking-widest uppercase text-premier-green mb-3">Technology &amp; Accountability</div>
+                    <h2 class="text-3xl md:text-4xl font-heading font-extrabold text-premier-blue mb-5">Technology-Driven Sanitation Management</h2>
+                    <p class="text-base mb-6">Every Premier IFS engagement is backed by our in-house sanitation management app &mdash; built to track the details that matter on your floor. It logs Master Sanitation Schedule completion, spill incident reports, employee training records, and site audit results, then puts real-time KPI reporting directly in your hands.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-2">
+                        <div class="flex items-start gap-2 text-sm font-medium">
+                            <i class="fas fa-check text-premier-green mt-1"></i>
+                            <span>Master Sanitation Schedule tracking</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-sm font-medium">
+                            <i class="fas fa-check text-premier-green mt-1"></i>
+                            <span>Spill incident reporting</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-sm font-medium">
+                            <i class="fas fa-check text-premier-green mt-1"></i>
+                            <span>Employee training records</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-sm font-medium">
+                            <i class="fas fa-check text-premier-green mt-1"></i>
+                            <span>Site audit results &amp; scoring</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-sm font-medium">
+                            <i class="fas fa-check text-premier-green mt-1"></i>
+                            <span>Customer-facing KPI reporting</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-sm font-medium">
+                            <i class="fas fa-check text-premier-green mt-1"></i>
+                            <span>Real-time performance feedback</span>
+                        </div>
+                    </div>
+                    <div class="miniquote">The Premier IFS app gives our team &mdash; and yours &mdash; instant feedback on performance, so nothing falls through the cracks.</div>
+                </div>
+
+                <div class="db-card">
+                    <div class="db-top">
+                        <span class="dt">Sanitation Performance Dashboard</span>
+                        <span class="dots"><i></i><i></i><i></i></span>
+                    </div>
+                    <div class="db-body">
+                        <div class="db-kpi-row">
+                            <div class="db-kpi"><div class="n gr">98%</div><div class="kl">MSS Complete</div></div>
+                            <div class="db-kpi"><div class="n">A</div><div class="kl">Audit Score</div></div>
+                            <div class="db-kpi"><div class="n gr">0</div><div class="kl">Open Incidents</div></div>
+                        </div>
+                        <div class="db-bars">
+                            <div class="bar" style="height:60%"></div>
+                            <div class="bar" style="height:78%"></div>
+                            <div class="bar g" style="height:92%"></div>
+                            <div class="bar" style="height:70%"></div>
+                            <div class="bar g" style="height:100%"></div>
+                            <div class="bar" style="height:84%"></div>
+                            <div class="bar g" style="height:96%"></div>
+                        </div>
+                        <div class="db-prog">
+                            <div class="db-prow"><span class="pl">MSS On Schedule</span><span class="db-track"><span class="db-fill" style="width:98%"></span></span></div>
+                            <div class="db-prow"><span class="pl">Training Current</span><span class="db-track"><span class="db-fill" style="width:96%"></span></span></div>
+                            <div class="db-prow"><span class="pl">Spill Response</span><span class="db-track"><span class="db-fill" style="width:100%"></span></span></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -312,446 +464,270 @@
     </section>
 
     <!-- Why Outsource Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
+    <section class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4 reveal">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-premier-blue mb-4">Why Outsource to Premier IFS?</h2>
-                <div class="w-20 h-1 bg-premier-orange mx-auto mb-6"></div>
+                <div class="font-heading font-bold text-xs tracking-widest uppercase text-premier-green mb-3">Why Premier</div>
+                <h2 class="text-3xl md:text-4xl font-heading font-extrabold text-premier-blue mb-4">Why Outsource to Premier IFS?</h2>
+                <div class="w-16 h-1 bg-premier-green mx-auto mb-6 rounded-full"></div>
                 <p class="text-lg max-w-3xl mx-auto">Focus on your core business while we handle the cleaning with professional expertise and efficiency.</p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Cost Savings -->
-                <div class="bg-premier-light-blue p-8 rounded-lg">
-                    <div class="flex items-center mb-6">
-                        <div class="bg-premier-orange text-white p-3 rounded-full mr-4">
-                            <i class="fas fa-dollar-sign text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-premier-blue">Significant Cost Savings</h3>
-                    </div>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-premier-green mt-1 mr-3"></i>
-                            <span>Eliminate recruitment, training, and HR costs associated with in-house cleaning staff</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-premier-green mt-1 mr-3"></i>
-                            <span>No need to invest in expensive cleaning equipment and supplies</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-premier-green mt-1 mr-3"></i>
-                            <span>Pay only for the services you need, when you need them</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-premier-green mt-1 mr-3"></i>
-                            <span>Reduce overhead costs for employee benefits and insurance</span>
-                        </li>
-                    </ul>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+                <div class="why-card bg-white border border-gray-100 rounded-xl p-6 shadow-sm transition-all duration-300">
+                    <div class="w-9 h-9 rounded-lg bg-premier-primary-green text-white font-heading font-extrabold flex items-center justify-center mb-4">1</div>
+                    <h3 class="font-heading font-bold text-premier-blue mb-2">Significant Cost Savings</h3>
+                    <p class="text-sm">Eliminate recruitment, training, HR, and equipment costs entirely.</p>
                 </div>
-                
-                <!-- Expertise & Focus -->
-                <div class="bg-premier-light-blue p-8 rounded-lg">
-                    <div class="flex items-center mb-6">
-                        <div class="bg-premier-orange text-white p-3 rounded-full mr-4">
-                            <i class="fas fa-medal text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-premier-blue">Industry Expertise</h3>
-                    </div>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-premier-green mt-1 mr-3"></i>
-                            <span>Specialized knowledge of food safety and industrial cleaning standards</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-premier-green mt-1 mr-3"></i>
-                            <span>Stay compliant with industry regulations and certifications</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-premier-green mt-1 mr-3"></i>
-                            <span>Access to professional-grade equipment and eco-friendly cleaning solutions</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-premier-green mt-1 mr-3"></i>
-                            <span>Consistent, high-quality results from trained professionals</span>
-                        </li>
-                    </ul>
+                <div class="why-card bg-white border border-gray-100 rounded-xl p-6 shadow-sm transition-all duration-300">
+                    <div class="w-9 h-9 rounded-lg bg-premier-primary-green text-white font-heading font-extrabold flex items-center justify-center mb-4">2</div>
+                    <h3 class="font-heading font-bold text-premier-blue mb-2">Predictable Weekly Pricing</h3>
+                    <p class="text-sm">One flat rate each week for the full scope of work in your contract &mdash; no surprise invoices, easy to budget.</p>
+                </div>
+                <div class="why-card bg-white border border-gray-100 rounded-xl p-6 shadow-sm transition-all duration-300">
+                    <div class="w-9 h-9 rounded-lg bg-premier-primary-green text-white font-heading font-extrabold flex items-center justify-center mb-4">3</div>
+                    <h3 class="font-heading font-bold text-premier-blue mb-2">Industry Expertise</h3>
+                    <p class="text-sm">Specialized knowledge of food safety and industrial cleaning standards.</p>
+                </div>
+                <div class="why-card bg-white border border-gray-100 rounded-xl p-6 shadow-sm transition-all duration-300">
+                    <div class="w-9 h-9 rounded-lg bg-premier-primary-green text-white font-heading font-extrabold flex items-center justify-center mb-4">4</div>
+                    <h3 class="font-heading font-bold text-premier-blue mb-2">Compliance-Focused</h3>
+                    <p class="text-sm">Protocols built around BRC, FDA, USDA, and OSHA guidance.</p>
+                </div>
+                <div class="why-card bg-white border border-gray-100 rounded-xl p-6 shadow-sm transition-all duration-300">
+                    <div class="w-9 h-9 rounded-lg bg-premier-primary-green text-white font-heading font-extrabold flex items-center justify-center mb-4">5</div>
+                    <h3 class="font-heading font-bold text-premier-blue mb-2">Trained &amp; Insured Teams</h3>
+                    <p class="text-sm">Professional-grade equipment and eco-friendly cleaning solutions.</p>
+                </div>
+                <div class="why-card bg-white border border-gray-100 rounded-xl p-6 shadow-sm transition-all duration-300">
+                    <div class="w-9 h-9 rounded-lg bg-premier-primary-green text-white font-heading font-extrabold flex items-center justify-center mb-4">6</div>
+                    <h3 class="font-heading font-bold text-premier-blue mb-2">Dedicated Support</h3>
+                    <p class="text-sm">Ongoing supervision, QA checks, and continuous program refinement.</p>
                 </div>
             </div>
-            
+
             <!-- Focus on Your Business CTA -->
-            <div class="mt-12 bg-white p-8 rounded-lg shadow-lg border border-gray-100 max-w-4xl mx-auto text-center">
-                <div class="flex flex-col md:flex-row items-center justify-center">
-                    <div class="md:mr-8 mb-6 md:mb-0">
-                        <i class="fas fa-bullseye text-5xl text-premier-orange mb-4"></i>
-                        <h3 class="text-2xl font-bold text-premier-blue">Focus on What You Do Best</h3>
-                    </div>
-                    <div class="text-left">
-                        <p class="mb-4">Let us handle the cleaning while you focus on growing your business. Our professional team ensures your facility remains clean, safe, and compliant, so you can concentrate on your core operations and strategic goals.</p>
-                        <a href="#contact" class="inline-block bg-premier-orange hover:bg-premier-blue text-white font-bold py-3 px-6 rounded-lg transition-colors">
-                            Get a Free Consultation
-                        </a>
-                    </div>
-                </div>
+            <div class="bg-premier-light-blue p-8 md:p-10 rounded-2xl max-w-4xl mx-auto text-center">
+                <i class="fas fa-bullseye text-4xl text-premier-green mb-4"></i>
+                <h3 class="text-2xl font-heading font-bold text-premier-blue mb-3">Focus on What You Do Best</h3>
+                <p class="mb-6 max-w-2xl mx-auto">Let us handle the cleaning while you focus on growing your business. Our professional team ensures your facility remains clean, safe, and compliant, so you can concentrate on your core operations and strategic goals.</p>
+                <a href="#contact" class="inline-block bg-premier-primary-green hover:bg-premier-green text-white font-heading font-bold py-3 px-7 rounded-lg transition-colors">
+                    Get a Free Consultation
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Careers Section -->
-    <section id="careers" class="py-16 bg-premier-blue text-white">
+    <section id="careers" class="py-16 md:py-20 bg-premier-blue text-white reveal">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Join Our Team</h2>
-                <div class="w-20 h-1 bg-premier-orange mx-auto mb-6"></div>
+                <div class="font-heading font-bold text-xs tracking-widest uppercase text-premier-mint mb-3">Careers</div>
+                <h2 class="text-3xl md:text-4xl font-heading font-extrabold mb-4">Join Our Team</h2>
+                <div class="w-16 h-1 bg-premier-green mx-auto mb-6 rounded-full"></div>
                 <p class="text-lg max-w-3xl mx-auto">We're always looking for dedicated professionals to join our growing team of industrial cleaning specialists.</p>
+                <a href="https://premier-ifs.app/apply" class="inline-flex items-center gap-2 mt-6 bg-premier-primary-green hover:bg-premier-green text-white font-heading font-bold py-3 px-7 rounded-lg transition-colors">
+                    View Open Positions &amp; Apply <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-4">
                 <!-- Site Level Positions -->
                 <div>
                     <div class="text-center mb-6">
-                        <h3 class="text-2xl font-bold text-white mb-2">Site-Level Positions</h3>
+                        <h3 class="text-2xl font-heading font-bold text-white mb-2">Site-Level Positions</h3>
                     </div>
                     <!-- Job 1 -->
-                    <div class="bg-premier-light-blue bg-opacity-20 p-6 rounded-lg mb-4">
-                        <h4 class="text-xl font-bold mb-2">Sanitation Technician</h4>
+                    <div class="bg-premier-light-blue bg-opacity-20 p-6 rounded-xl mb-4">
+                        <h4 class="text-xl font-heading font-bold mb-2">Sanitation Technician</h4>
                         <p class="mb-4">Entry-level position with training provided. Responsible for executing cleaning protocols.</p>
                         <div class="flex gap-4 mt-4">
-                            <button class="view-details-btn bg-transparent hover:bg-premier-light-blue text-premier-blue hover:text-premier-orange font-medium py-2 px-4 rounded" data-job="Sanitation Technician">View Details</button>
-                            <a href="apply.html" class="apply-btn bg-premier-primary-green hover:bg-premier-green text-white font-medium py-2 px-4 rounded">Apply Now</a>
+                            <button class="view-details-btn bg-transparent hover:bg-premier-light-blue text-white hover:text-premier-blue font-heading font-medium py-2 px-4 rounded-lg border border-white border-opacity-30" data-job="Sanitation Technician">View Details</button>
+                            <a href="https://premier-ifs.app/apply" class="bg-premier-primary-green hover:bg-premier-green text-white font-heading font-medium py-2 px-4 rounded-lg">Apply Now</a>
                         </div>
                         <div class="job-details hidden mt-4">
-                            <h5 class="font-bold mb-2">Requirements:</h5>
-                            <ul class="space-y-2 pl-4">
-                                <li>• Must be able to work in cold, wet, and physically demanding environments</li>
-                                <li>• Ability to follow strict safety and food sanitation guidelines</li>
-                                <li>• Must be able to lift up to 50 lbs and stand for extended periods</li>
-                                <li>• Reliable transportation and punctual attendance required</li>
-                                <li>• Attention to detail and commitment to quality</li>
-                                <li>• Willingness to wear PPE (personal protective equipment) at all times</li>
-                                <li>• Must be able to work in a team environment and follow instructions</li>
+                            <h5 class="font-heading font-bold mb-2">Requirements:</h5>
+                            <ul class="space-y-2 pl-4 text-sm">
+                                <li>&bull; Must be able to work in cold, wet, and physically demanding environments</li>
+                                <li>&bull; Ability to follow strict safety and food sanitation guidelines</li>
+                                <li>&bull; Must be able to lift up to 50 lbs and stand for extended periods</li>
+                                <li>&bull; Reliable transportation and punctual attendance required</li>
+                                <li>&bull; Attention to detail and commitment to quality</li>
+                                <li>&bull; Willingness to wear PPE (personal protective equipment) at all times</li>
+                                <li>&bull; Must be able to work in a team environment and follow instructions</li>
                             </ul>
                         </div>
                     </div>
-                    
+
                     <!-- Job 2 -->
-                    <div class="bg-premier-light-blue bg-opacity-20 p-6 rounded-lg mb-4">
-                        <h4 class="text-xl font-bold mb-2">Sanitation Supervisor</h4>
+                    <div class="bg-premier-light-blue bg-opacity-20 p-6 rounded-xl mb-4">
+                        <h4 class="text-xl font-heading font-bold mb-2">Sanitation Supervisor</h4>
                         <p class="mb-4">Supports the Site Manager by directly overseeing sanitation technicians, ensuring all cleaning tasks are completed safely, efficiently, and in compliance with food safety standards and facility protocols.</p>
                         <div class="flex gap-4 mt-4">
-                            <button class="view-details-btn bg-transparent hover:bg-premier-light-blue text-premier-blue hover:text-premier-orange font-medium py-2 px-4 rounded" data-job="Sanitation Supervisor">View Details</button>
-                            <a href="apply.html?position=Sanitation%20Supervisor" class="apply-btn bg-premier-primary-green hover:bg-premier-green text-white font-medium py-2 px-4 rounded">Apply Now</a>
+                            <button class="view-details-btn bg-transparent hover:bg-premier-light-blue text-white hover:text-premier-blue font-heading font-medium py-2 px-4 rounded-lg border border-white border-opacity-30" data-job="Sanitation Supervisor">View Details</button>
+                            <a href="https://premier-ifs.app/apply?position=Sanitation%20Supervisor" class="bg-premier-primary-green hover:bg-premier-green text-white font-heading font-medium py-2 px-4 rounded-lg">Apply Now</a>
                         </div>
                         <div class="job-details hidden mt-4">
-                            <h5 class="font-bold mb-2">Requirements:</h5>
-                            <ul class="space-y-2 pl-4">
-                                <li>• 1+ year of experience in a sanitation or industrial cleaning role</li>
-                                <li>• Good communication and organizational skills</li>
-                                <li>• Knowledge of GMPs and food safety regulations</li>
-                                <li>• Ability to work in cold, wet, and physically demanding environments</li>
-                                <li>• Ability to train and motivate team members</li>
-                                <li>• Ability to work night shifts, weekends, or holidays as needed</li>
+                            <h5 class="font-heading font-bold mb-2">Requirements:</h5>
+                            <ul class="space-y-2 pl-4 text-sm">
+                                <li>&bull; 1+ year of experience in a sanitation or industrial cleaning role</li>
+                                <li>&bull; Good communication and organizational skills</li>
+                                <li>&bull; Knowledge of GMPs and food safety regulations</li>
+                                <li>&bull; Ability to work in cold, wet, and physically demanding environments</li>
+                                <li>&bull; Ability to train and motivate team members</li>
+                                <li>&bull; Ability to work night shifts, weekends, or holidays as needed</li>
                             </ul>
                         </div>
                     </div>
-                    
+
                     <!-- Job 3 -->
-                    <div class="bg-premier-light-blue bg-opacity-20 p-6 rounded-lg">
-                        <h4 class="text-xl font-bold mb-2">Site Manager</h4>
+                    <div class="bg-premier-light-blue bg-opacity-20 p-6 rounded-xl">
+                        <h4 class="text-xl font-heading font-bold mb-2">Site Manager</h4>
                         <p class="mb-4">Oversees all sanitation operations at the facility, ensuring compliance with safety standards, managing staff, and maintaining audit readiness.</p>
                         <div class="flex gap-4 mt-4">
-                            <button class="view-details-btn bg-transparent hover:bg-premier-light-blue text-premier-blue hover:text-premier-orange font-medium py-2 px-4 rounded" data-job="Site Manager">View Details</button>
-                            <a href="apply.html?position=Site%20Manager" class="apply-btn bg-premier-primary-green hover:bg-premier-green text-white font-medium py-2 px-4 rounded">Apply Now</a>
+                            <button class="view-details-btn bg-transparent hover:bg-premier-light-blue text-white hover:text-premier-blue font-heading font-medium py-2 px-4 rounded-lg border border-white border-opacity-30" data-job="Site Manager">View Details</button>
+                            <a href="https://premier-ifs.app/apply?position=Site%20Manager" class="bg-premier-primary-green hover:bg-premier-green text-white font-heading font-medium py-2 px-4 rounded-lg">Apply Now</a>
                         </div>
                         <div class="job-details hidden mt-4">
-                            <h5 class="font-bold mb-2">Requirements:</h5>
-                            <ul class="space-y-2 pl-4">
-                                <li>• Minimum 2 years of experience in a leadership or supervisory role (sanitation or production preferred)</li>
-                                <li>• Strong understanding of food safety protocols and audit readiness standards</li>
-                                <li>• Ability to work flexible hours, including nights or weekends as needed</li>
-                                <li>• Excellent problem-solving skills</li>
-                                <li>• Bilingual (English/Spanish) is a plus</li>
+                            <h5 class="font-heading font-bold mb-2">Requirements:</h5>
+                            <ul class="space-y-2 pl-4 text-sm">
+                                <li>&bull; Minimum 2 years of experience in a leadership or supervisory role (sanitation or production preferred)</li>
+                                <li>&bull; Strong understanding of food safety protocols and audit readiness standards</li>
+                                <li>&bull; Ability to work flexible hours, including nights or weekends as needed</li>
+                                <li>&bull; Excellent problem-solving skills</li>
+                                <li>&bull; Bilingual (English/Spanish) is a plus</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Why Work With Us -->
                 <div>
-                    <h3 class="text-2xl font-bold mb-6">Why Work With Us</h3>
-                    
-                    <div class="bg-premier-light-blue bg-opacity-20 p-6 rounded-lg mb-6">
-                        <h4 class="text-xl font-bold mb-4 text-premier-orange">Employee Benefits</h4>
+                    <h3 class="text-2xl font-heading font-bold mb-6">Why Work With Us</h3>
+
+                    <div class="bg-premier-light-blue bg-opacity-20 p-6 rounded-xl mb-6">
+                        <h4 class="text-xl font-heading font-bold mb-4 text-premier-mint">Employee Benefits</h4>
                         <ul class="space-y-4">
                             <li class="flex items-start">
-                                <i class="fas fa-check-circle text-premier-green mt-1 mr-3 text-xl"></i>
+                                <i class="fas fa-check-circle text-premier-mint mt-1 mr-3 text-xl"></i>
                                 <div>
-                                    <h5 class="font-bold">Health Insurance</h5>
+                                    <h5 class="font-heading font-bold">Health Insurance</h5>
                                     <p class="text-sm">Comprehensive medical, dental, and vision coverage options</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check-circle text-premier-green mt-1 mr-3 text-xl"></i>
+                                <i class="fas fa-check-circle text-premier-mint mt-1 mr-3 text-xl"></i>
                                 <div>
-                                    <h5 class="font-bold">Paid Time Off</h5>
+                                    <h5 class="font-heading font-bold">Paid Time Off</h5>
                                     <p class="text-sm">Accrued PTO for vacation and sick time</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check-circle text-premier-green mt-1 mr-3 text-xl"></i>
+                                <i class="fas fa-check-circle text-premier-mint mt-1 mr-3 text-xl"></i>
                                 <div>
-                                    <h5 class="font-bold">Training & Certification</h5>
+                                    <h5 class="font-heading font-bold">Training &amp; Certification</h5>
                                     <p class="text-sm">Paid training programs and certification opportunities</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check-circle text-premier-green mt-1 mr-3 text-xl"></i>
+                                <i class="fas fa-check-circle text-premier-mint mt-1 mr-3 text-xl"></i>
                                 <div>
-                                    <h5 class="font-bold">Safety Equipment</h5>
+                                    <h5 class="font-heading font-bold">Safety Equipment</h5>
                                     <p class="text-sm">All necessary PPE and safety gear provided</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check-circle text-premier-green mt-1 mr-3 text-xl"></i>
+                                <i class="fas fa-check-circle text-premier-mint mt-1 mr-3 text-xl"></i>
                                 <div>
-                                    <h5 class="font-bold">Career Growth</h5>
+                                    <h5 class="font-heading font-bold">Career Growth</h5>
                                     <p class="text-sm">Opportunities for advancement within our growing company</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                    
-                    <div class="bg-premier-light-blue bg-opacity-20 p-6 rounded-lg">
-                        <h4 class="text-xl font-bold mb-4 text-premier-orange">Our Hiring Process</h4>
-                        <ol class="space-y-4 list-decimal list-inside">
-                            <li>
-                                <div class="space-y-2">
-                                    <div class="font-bold">Application Submission</div>
-                                    <ul class="ml-6 text-sm list-disc list-inside">
-                                        <li>Complete our online application form</li>
-                                    </ul>
+
+                    <div class="bg-premier-light-blue bg-opacity-20 p-6 rounded-xl">
+                        <h4 class="text-xl font-heading font-bold mb-4 text-premier-mint">Our Hiring Process</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="w-8 h-8 rounded-full bg-premier-mint text-premier-blue font-heading font-extrabold flex items-center justify-center flex-none">1</div>
+                                <div>
+                                    <div class="font-heading font-bold">Application Submission</div>
+                                    <p class="text-sm">Complete our online application form.</p>
                                 </div>
-                            </li>
-                            <li>
-                                <div class="space-y-2">
-                                    <div class="font-bold">Phone Screening</div>
-                                    <ul class="ml-6 text-sm list-disc list-inside">
-                                        <li>Brief interview with our HR team</li>
-                                </ul>
-                            </li>
-                            <li class="font-bold">In-Person Interview
-                                <ul class="ml-6 text-sm list-disc list-inside mt-2">
-                                <li>Meet with the site manager</li>
-                            </ul>
-                            <li class="font-bold">Background Check</li>
-                            <ul class="ml-6 text-sm">
-                                <li>Standard employment screening</li>
-                            </ul>
-                            <li class="font-bold">Job Offer & Onboarding</li>
-                            <ul class="ml-6 text-sm">
-                                <li>Welcome to the Premier IFS team!</li>
-                            </ul>
-                        </ol>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-8 h-8 rounded-full bg-premier-mint text-premier-blue font-heading font-extrabold flex items-center justify-center flex-none">2</div>
+                                <div>
+                                    <div class="font-heading font-bold">Phone Screening</div>
+                                    <p class="text-sm">Brief interview with our HR team.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-8 h-8 rounded-full bg-premier-mint text-premier-blue font-heading font-extrabold flex items-center justify-center flex-none">3</div>
+                                <div>
+                                    <div class="font-heading font-bold">In-Person Interview</div>
+                                    <p class="text-sm">Meet with the site manager.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-8 h-8 rounded-full bg-premier-mint text-premier-blue font-heading font-extrabold flex items-center justify-center flex-none">4</div>
+                                <div>
+                                    <div class="font-heading font-bold">Background Check</div>
+                                    <p class="text-sm">Standard employment screening.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-8 h-8 rounded-full bg-premier-mint text-premier-blue font-heading font-extrabold flex items-center justify-center flex-none">5</div>
+                                <div>
+                                    <div class="font-heading font-bold">Job Offer &amp; Onboarding</div>
+                                    <p class="text-sm">Welcome to the Premier IFS team!</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Application Form (hidden by default) -->
-            <div id="application-form" class="hidden bg-white text-premier-blue p-8 rounded-lg shadow-lg max-w-3xl mx-auto">
-                <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-2xl font-bold">Application for <span id="job-title"></span></h3>
-                    <button id="close-form" class="text-premier-gray hover:text-premier-orange" aria-label="Close application form">
-                        <i class="fas fa-times text-2xl" aria-hidden="true"></i>
-                    </button>
-                </div>
-                
-                <form id="career-form" class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="first-name" class="block font-medium mb-1">First Name*</label>
-                            <input type="text" id="first-name" name="first-name" required class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-premier-orange">
-                        </div>
-                        <div>
-                            <label for="last-name" class="block font-medium mb-1">Last Name*</label>
-                            <input type="text" id="last-name" name="last-name" required class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-premier-orange">
-                        </div>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="email" class="block font-medium mb-1">Email</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-premier-orange">
-                        </div>
-                        <div>
-                            <label for="phone" class="block font-medium mb-1">Phone</label>
-                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-premier-orange">
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <label for="address" class="block font-medium mb-1">Address</label>
-                        <input type="text" id="address" name="address" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-premier-orange">
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="city" class="block font-medium mb-1">City</label>
-                            <input type="text" id="city" name="city" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-premier-orange">
-                        </div>
-                        <div>
-                            <label for="zip" class="block font-medium mb-1">ZIP Code</label>
-                            <input type="text" id="zip" name="zip" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-premier-orange">
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <label for="availability" class="block font-medium mb-1">Availability*</label>
-                        <select id="availability" name="availability" required class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-premier-orange">
-                            <option value="">Select your availability</option>
-                            <option value="full-time">Full-Time</option>
-                            <option value="part-time">Part-Time</option>
-                            <option value="weekends">Weekends Only</option>
-                            <option value="nights">Nights Only</option>
-                            <option value="on-call">On-Call</option>
-                        </select>
-                    </div>
-                    
-                    <div>
-                        <label for="experience" class="block font-medium mb-1">Relevant Experience*</label>
-                        <textarea id="experience" name="experience" rows="3" required class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-premier-orange"></textarea>
-                    </div>
-                    
-                    <div>
-                        <label for="resume" class="block font-medium mb-1">Upload Resume*</label>
-                        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-premier-orange">
-                        <p class="text-sm text-gray-500 mt-1">Accepted file types: PDF, DOC, DOCX (Max size: 5MB)</p>
-                    </div>
-                    
-                    <div>
-                        <button type="submit" class="bg-premier-orange hover:bg-orange-600 text-white font-bold py-3 px-6 rounded">Submit Application</button>
-                    </div>
-                </form>
-            </div>
-            
-            <!-- Success Message (hidden by default) -->
-            <div id="application-success" class="hidden bg-premier-green text-white p-8 rounded-lg shadow-lg max-w-3xl mx-auto text-center">
-                <i class="fas fa-check-circle text-5xl mb-4"></i>
-                <h3 class="text-2xl font-bold mb-2">Application Submitted!</h3>
-                <p class="mb-6">Thank you for applying to join the Premier IFS team. We'll review your application and be in touch soon.</p>
-                <button id="close-success" class="bg-white text-premier-green font-bold py-2 px-6 rounded">Close</button>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white">
+    <section id="contact" class="py-16 md:py-20 bg-white reveal">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-premier-blue mb-4">Contact Us</h2>
-                <div class="w-20 h-1 bg-premier-orange mx-auto mb-6"></div>
+                <div class="font-heading font-bold text-xs tracking-widest uppercase text-premier-green mb-3">Get In Touch</div>
+                <h2 class="text-3xl md:text-4xl font-heading font-extrabold text-premier-blue mb-4">Contact Us</h2>
+                <div class="w-16 h-1 bg-premier-green mx-auto mb-6 rounded-full"></div>
                 <p class="text-lg max-w-3xl mx-auto">Ready to discuss your industrial cleaning needs? Get in touch with our team today.</p>
             </div>
-            
-            <div class="flex flex-col lg:flex-row gap-8">
-                <!-- Contact Info -->
-                <div class="lg:w-1/3">
-                    <div class="bg-premier-light-blue p-8 rounded-lg shadow-sm h-full">
-                        <h3 class="text-xl font-bold text-premier-blue mb-6">Our Office</h3>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-start">
-                                <div class="text-premier-orange text-xl mr-4 mt-1">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold mb-1">Address</h4>
-                                    <p>609-A Piner Rd Suite 182<br>
-                                    Wilmington, NC 28409</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="text-premier-orange text-xl mr-4 mt-1">
-                                    <i class="fas fa-phone-alt"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold mb-1">Phone</h4>
-                                    <p>(910) 512-5952</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="text-premier-orange text-xl mr-4 mt-1">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold mb-1">Email</h4>
-                                    <p>info@premier-ifs.com</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="text-premier-orange text-xl mr-4 mt-1">
-                                    <i class="fas fa-clock"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold mb-1">Office Hours</h4>
-                                    <p>Monday - Friday: 8:00 AM - 5:00 PM<br>
-                                </div>
-                            </div>
-                        </div>
-                        
 
+            <div class="max-w-2xl mx-auto bg-premier-light-blue p-8 md:p-10 rounded-2xl shadow-sm">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div class="flex items-start">
+                        <div class="text-premier-green text-xl mr-4 mt-1">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-bold mb-1">Phone</h4>
+                            <a href="tel:+19102325316" class="hover:text-premier-orange">(910) 232-5316</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="text-premier-green text-xl mr-4 mt-1">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-bold mb-1">Email</h4>
+                            <a href="mailto:info@premier-ifs.com" class="hover:text-premier-orange">info@premier-ifs.com</a>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Contact Form -->
-                <div class="lg:w-2/3">
-                    <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
-                        <h3 class="text-xl font-bold text-premier-blue mb-6">Send Us a Message</h3>
-                        
-                        <form id="contact-form" class="space-y-6">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label for="contact-name" class="block font-medium mb-1">Name*</label>
-                                    <input type="text" id="contact-name" name="contact-name" required class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-premier-orange">
-                                </div>
-                                <div>
-                                    <label for="contact-company" class="block font-medium mb-1">Company</label>
-                                    <input type="text" id="contact-company" name="contact-company" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-premier-orange">
-                                </div>
-                            </div>
-                            
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label for="contact-email" class="block font-medium mb-1">Email*</label>
-                                    <input type="email" id="contact-email" name="contact-email" required class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-premier-orange">
-                                </div>
-                                <div>
-                                    <label for="contact-phone" class="block font-medium mb-1">Phone</label>
-                                    <input type="tel" id="contact-phone" name="contact-phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:premier-orange">
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <label for="service-interest" class="block font-medium mb-1">Service Interest*</label>
-                                <select id="service-interest" name="service-interest" required class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-premier-orange">
-                                    <option value="full-facility">Full-Facility Sanitation</option>
-                                    <option value="office-space">Office Space Sanitation</option>
-                                    <option value="custom">Custom Cleaning Program</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            
-                            <div>
-                                <label for="contact-message" class="block font-medium mb-1">Message*</label>
-                                <textarea id="contact-message" name="contact-message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-premier-orange"></textarea>
-                            </div>
-                            
-                            <div>
-                                <button type="submit" class="bg-premier-primary-green hover:bg-premier-green text-white font-bold py-3 px-6 rounded">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
+
+                <div class="mt-8 pt-8 border-t border-blue-100 text-center">
+                    <a href="tel:+19102325316" class="inline-block bg-premier-primary-green hover:bg-premier-green text-white font-heading font-bold py-3 px-7 rounded-lg transition-colors">
+                        Call Us Today
+                    </a>
                 </div>
             </div>
         </div>
@@ -762,58 +738,55 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
-                    <img src="Premier_Logo.png" alt="Premier Industrial Facility Solutions Logo" class="h-12 mb-4">
-                    <p class="mb-4">Professional cleaning services for industrial facilities across the Southeastern United States.</p>
+                    <img src="Premier LOGO only_no background.png" alt="" class="h-10 mb-3 opacity-90">
+                    <p class="font-heading font-bold text-white mb-1">Premier Industrial Facility Solutions</p>
+                    <p class="text-blue-100 text-sm">Professional sanitation services for warehouses and food-processing facilities.</p>
+                </div>
 
-                </div>
-                
                 <div>
-                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <h4 class="text-lg font-heading font-bold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="#home" class="hover:text-premier-orange">Home</a></li>
-                        <li><a href="#about" class="hover:text-premier-orange">About Us</a></li>
-                        <li><a href="#services" class="hover:text-premier-orange">Services</a></li>
-                        <li><a href="#careers" class="hover:text-premier-orange">Careers</a></li>
-                        <li><a href="#contact" class="hover:text-premier-orange">Contact</a></li>
+                        <li><a href="#home" class="hover:text-premier-mint">Home</a></li>
+                        <li><a href="#about" class="hover:text-premier-mint">About Us</a></li>
+                        <li><a href="#services" class="hover:text-premier-mint">Services</a></li>
+                        <li><a href="#process" class="hover:text-premier-mint">Process</a></li>
+                        <li><a href="#careers" class="hover:text-premier-mint">Careers</a></li>
+                        <li><a href="#contact" class="hover:text-premier-mint">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
-                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <h4 class="text-lg font-heading font-bold mb-4">Services</h4>
                     <ul class="space-y-2">
-                        <li><a href="#services" class="hover:text-premier-orange">Full-Facility Sanitation</a></li>
-                        <li><a href="#services" class="hover:text-premier-orange">Office Space Sanitation</a></li>
-                        <li><a href="#services" class="hover:text-premier-orange">Custom Cleaning Program</a></li>
-                        <li><a href="#services" class="hover:text-premier-orange">Other</a></li>
+                        <li><a href="warehouse-sanitation.html" class="hover:text-premier-mint">Warehouse Sanitation</a></li>
+                        <li><a href="office-space-sanitation.html" class="hover:text-premier-mint">Office Space Sanitation</a></li>
+                        <li><a href="food-processing-plant-cleaning.html" class="hover:text-premier-mint">Food Processing Plant Cleaning</a></li>
+                        <li><a href="custom-cleaning-programs.html" class="hover:text-premier-mint">Custom Cleaning Program</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
-                    <h4 class="text-lg font-bold mb-4">Contact Info</h4>
+                    <h4 class="text-lg font-heading font-bold mb-4">Contact Info</h4>
                     <ul class="space-y-2">
                         <li class="flex items-start">
-                            <i class="fas fa-phone-alt mt-1 mr-2 text-premier-orange"></i>
-                            <span>(910) 512-5952</span>
+                            <i class="fas fa-phone-alt mt-1 mr-2 text-premier-mint"></i>
+                            <span>(910) 232-5316</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-envelope mt-1 mr-2 text-premier-orange"></i>
+                            <i class="fas fa-envelope mt-1 mr-2 text-premier-mint"></i>
                             <span>info@premier-ifs.com</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-premier-orange"></i>
-                            <span>609-A Piner Rd Suite 182<br>Wilmington, NC 28409</span>
                         </li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="pt-8 border-t border-gray-700">
+
+            <div class="pt-8 border-t border-white border-opacity-20">
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <p>&copy; <span id="current-year"></span> Premier Industrial Facility Solutions. All rights reserved.</p>
                     <div class="flex space-x-4 mt-4 md:mt-0">
-                        <a href="#" class="hover:text-premier-orange">Privacy Policy</a>
-                        <a href="#" class="hover:text-premier-orange">Terms of Service</a>
-                        <a href="#" class="hover:text-premier-orange">Sitemap</a>
+                        <a href="#" class="hover:text-premier-mint">Privacy Policy</a>
+                        <a href="#" class="hover:text-premier-mint">Terms of Service</a>
+                        <a href="#" class="hover:text-premier-mint">Sitemap</a>
                     </div>
                 </div>
             </div>
@@ -822,10 +795,28 @@
 
     <!-- Scripts -->
     <script>
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Once animated, we don't need to observe it anymore
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1, // Trigger when 10% of element is visible
+            rootMargin: '0px 0px -50px 0px' // Slightly offset from bottom
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        
+
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('open');
         });
@@ -836,98 +827,28 @@
                 // Find the job-details div within the same parent
                 const jobCard = button.closest('.bg-premier-light-blue');
                 const detailsDiv = jobCard.querySelector('.job-details');
-                
+
                 detailsDiv.classList.toggle('hidden');
                 button.textContent = button.textContent === 'View Details' ? 'Hide Details' : 'View Details';
             });
         });
-        
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 // Close mobile menu if open
                 mobileMenu.classList.remove('open');
-                
+
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
             });
         });
-        
+
         // Set current year in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
-        
-        // Job application form handling
-        const applyButtons = document.querySelectorAll('.apply-btn');
-        const applicationForm = document.getElementById('application-form');
-        const jobTitleElement = document.getElementById('job-title');
-        const closeFormButton = document.getElementById('close-form');
-        const careerForm = document.getElementById('career-form');
-        const applicationSuccess = document.getElementById('application-success');
-        const closeSuccessButton = document.getElementById('close-success');
-        
-        applyButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const jobTitle = button.getAttribute('data-job');
-                jobTitleElement.textContent = jobTitle;
-                applicationForm.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            });
-        });
-        
-        closeFormButton.addEventListener('click', () => {
-            applicationForm.classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        });
-        
-        closeSuccessButton.addEventListener('click', () => {
-            applicationSuccess.classList.add('hidden');
-            applicationForm.classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        });
-        
-        careerForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Here you would typically send the form data to your server
-            // For this example, we'll just show the success message
-            
-            // Reset form
-            careerForm.reset();
-            
-            // Hide form and show success message
-            applicationForm.classList.add('hidden');
-            applicationSuccess.classList.remove('hidden');
-        });
-        
-        // Contact form handling
-        const contactForm = document.getElementById('contact-form');
-        
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Here you would typically send the form data to your server
-            // For this example, we'll just show an alert
-            
-            // Reset form
-            contactForm.reset();
-            
-            alert('Thank you for your message! We will get back to you soon.');
-        });
-        
-        // Google Analytics tracking code would go here
-        // This is just a placeholder - you would replace with your actual GA code
-        /*
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-        
-        ga('create', 'UA-XXXXX-Y', 'auto');
-        ga('send', 'pageview');
-        */
     </script>
 </body>
 </html>
