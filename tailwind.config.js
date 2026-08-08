@@ -7,6 +7,9 @@ module.exports = {
     "./office-space-sanitation.html",
     "./food-processing-plant-cleaning.html",
     "./custom-cleaning-programs.html",
+    "./privacy-policy.html",
+    "./terms-of-service.html",
+    "./sitemap.html",
     "./brochure.html",
     "./brochure2.html"
   ],
