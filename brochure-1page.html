@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premier Industrial Facility Solutions: Company Overview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#0E39D2;
+    --blue-d:#003366;
+    --blue-mist:#EAF1FF;
+    --green:#00AE41;
+    --green-d:#048C35;
+    --green-mist:#E7F8EC;
+    --ink:#23262B;
+    --gray:#5C6470;
+    --line:#E2E6EC;
+    --soft:#F5F7F9;
+    --white:#ffffff;
+    --mint:#7EE8A8;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:'Inter',Arial,Helvetica,sans-serif;
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  h1,h2,h3,h4{font-family:'Montserrat',Arial,sans-serif;margin:0;}
+  p{margin:0;}
+  a{color:inherit;text-decoration:none;}
+
+  /* ---------- Page frame (fixed to exactly one Letter page) ---------- */
+  .page{
+    width:8.5in;
+    height:11in;
+    background:var(--white);
+    position:relative;
+    overflow:hidden;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+  }
+
+  @page{ size:Letter; margin:0; }
+
+  @media screen{
+    body{background:#dfe3e8;padding:24px 0;}
+    .page{box-shadow:0 8px 30px rgba(0,0,0,.18);}
+  }
+
+  @media print{
+    .no-print{display:none !important;}
+  }
+
+  /* ---------- Print controls (screen only) ---------- */
+  .print-controls{
+    max-width:8.5in;margin:0 auto 20px;text-align:center;padding:15px;
+    background:white;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.1);
+  }
+  .print-btn{
+    background:var(--blue);color:white;padding:12px 30px;border:none;border-radius:5px;
+    font-size:16px;font-weight:bold;cursor:pointer;margin:0 10px;font-family:'Inter',sans-serif;
+  }
+  .print-btn:hover{background:var(--blue-d);}
+  .print-btn.secondary{background:var(--green);}
+  .print-btn.secondary:hover{background:var(--green-d);}
+
+  /* ---------- Shared ---------- */
+  .pad{padding-left:0.5in;padding-right:0.5in;}
+  .rule{height:3px;width:40px;background:var(--green);border-radius:2px;flex:none;}
+  .sec-head{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+  .sec-head .h-sec{
+    font-family:'Montserrat',sans-serif;font-weight:800;color:var(--blue-d);
+    font-size:15px;letter-spacing:-.01em;line-height:1.15;
+  }
+  .sec-head .line{flex:1;height:1px;background:var(--line);}
+  .block{margin-top:10px;}
+
+  svg.ic{display:block;flex:none;}
+
+  /* ---------- Top accent bar ---------- */
+  .topbar{height:7px;display:flex;flex:none;}
+  .topbar .b{flex:1;background:var(--blue);}
+  .topbar .g{width:32%;background:var(--green);}
+
+  /* ---------- Header ---------- */
+  .head{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:10px 0.5in 8px;flex:none;
+  }
+  .head img.logo{height:0.5in;width:auto;display:block;}
+  .head-right{text-align:right;}
+  .head-right .t1{font-family:'Montserrat',sans-serif;font-weight:700;font-size:10px;color:var(--blue-d);letter-spacing:.03em;text-transform:uppercase;}
+  .head-right .t2{font-size:12px;color:var(--gray);margin-top:3px;font-weight:600;}
+
+  /* ---------- Hero band ---------- */
+  .hero{
+    background:linear-gradient(120deg,var(--blue) 0%,var(--blue-d) 100%);
+    color:#fff;padding:14px 0.5in 13px;position:relative;overflow:hidden;flex:none;
+  }
+  .hero::after{
+    content:"";position:absolute;right:-65px;top:-70px;width:220px;height:220px;
+    border-radius:50%;background:rgba(0,174,65,.20);
+  }
+  .hero::before{
+    content:"";position:absolute;left:38%;bottom:-90px;width:160px;height:160px;
+    border-radius:50%;background:rgba(255,255,255,.05);
+  }
+  .hero .kick{color:#bfe0ff;font-weight:700;font-size:10px;letter-spacing:.15em;text-transform:uppercase;position:relative;z-index:2;}
+  .hero h1{font-size:27px;font-weight:800;line-height:1.12;margin-top:6px;letter-spacing:-.01em;position:relative;z-index:2;}
+  .hero h1 .accent{color:var(--mint);}
+  .hero .sub{margin-top:7px;font-size:11.5px;line-height:1.5;color:#e3ecfb;max-width:6.4in;position:relative;z-index:2;}
+
+  /* trust chip row */
+  .chiprow{
+    display:flex;justify-content:space-between;padding:8px 0.5in;
+    border-bottom:1px solid var(--line);flex:none;
+  }
+  .chip{display:flex;align-items:center;gap:7px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:10px;color:var(--blue-d);}
+  .chip .ck{
+    flex:none;width:15px;height:15px;border-radius:50%;background:var(--green-mist);
+    display:flex;align-items:center;justify-content:center;
+  }
+
+  /* ---------- Photo strip ---------- */
+  .photos{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:8px;margin-top:10px;}
+  .photos .imgframe{
+    height:0.98in;border-radius:8px;overflow:hidden;
+    border:1px solid var(--line);box-shadow:0 4px 12px rgba(5,40,120,.10);
+  }
+  .photos img{width:100%;height:100%;object-fit:cover;display:block;}
+
+  /* ---------- Service cards ---------- */
+  .svc-cards{display:grid;grid-template-columns:1fr 1fr;gap:9px 11px;}
+  .scard{
+    background:var(--soft);border:1px solid var(--line);border-top:3px solid var(--blue);
+    border-radius:8px;padding:9px 12px 10px;
+  }
+  .scard .st{display:flex;align-items:center;gap:8px;margin-bottom:6px;}
+  .scard .si{
+    flex:none;width:24px;height:24px;border-radius:6px;
+    background:linear-gradient(135deg,var(--blue),var(--green));
+    display:flex;align-items:center;justify-content:center;
+  }
+  .scard h3{font-size:12.2px;font-weight:700;color:var(--blue-d);line-height:1.2;}
+  .scard ul{list-style:none;margin:0;padding:0;}
+  .scard li{display:flex;gap:6px;align-items:flex-start;font-size:10px;line-height:1.38;color:var(--ink);margin-top:3px;}
+  .scard li svg{flex:none;margin-top:3px;}
+
+  /* ---------- Process strip ---------- */
+  .steps{display:flex;align-items:stretch;gap:6px;}
+  .step{flex:1;display:flex;gap:9px;align-items:center;background:var(--blue-mist);border:1px solid #d7e3f6;border-radius:8px;padding:8px 11px;}
+  .step .pnum{
+    flex:none;font-family:'Montserrat',sans-serif;font-weight:800;font-size:10.5px;color:#fff;
+    background:linear-gradient(135deg,var(--blue),var(--green));width:22px;height:22px;border-radius:5px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .step h4{font-size:10.8px;font-weight:700;color:var(--blue-d);line-height:1.2;}
+  .step p{font-size:9.5px;line-height:1.3;color:var(--gray);margin-top:1px;}
+  .arrow{flex:none;display:flex;align-items:center;}
+
+  /* ---------- Why grid ---------- */
+  .why-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px 11px;}
+  .why{display:flex;gap:8px;align-items:flex-start;padding:7px 10px;border:1px solid var(--line);border-left:3px solid var(--green);border-radius:7px;}
+  .why .wt{font-family:'Montserrat',sans-serif;font-weight:700;font-size:10.8px;color:var(--blue-d);line-height:1.2;}
+  .why .wd{font-size:9.5px;line-height:1.35;color:var(--gray);margin-top:2px;}
+
+  /* ---------- Serve + compliance ---------- */
+  .ftag-row{display:flex;flex-wrap:wrap;gap:6px;}
+  .ftag{
+    background:var(--blue-mist);border:1px solid #d7e3f6;color:var(--blue-d);
+    font-family:'Montserrat',sans-serif;font-weight:700;font-size:9.5px;
+    padding:4px 11px;border-radius:20px;
+  }
+  .badges{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;margin-top:9px;}
+  .badge{display:flex;align-items:center;gap:7px;background:#fff;border:1px solid #d7e3f6;border-radius:7px;padding:5px 8px;}
+  .badge .bi{flex:none;width:20px;height:20px;border-radius:5px;background:var(--blue);display:flex;align-items:center;justify-content:center;}
+  .badge .bt{font-family:'Montserrat',sans-serif;font-weight:700;font-size:10px;color:var(--blue-d);line-height:1.1;}
+  .badge .bs{font-size:7.8px;color:var(--gray);line-height:1.2;}
+
+  /* ---------- CTA ---------- */
+  .cta{
+    margin:14px 0.5in 0;background:linear-gradient(120deg,var(--green-d),var(--green));
+    border-radius:12px;padding:13px 19px;color:#fff;display:flex;gap:18px;align-items:center;flex:none;
+  }
+  .cta .ctl{flex:1.35;}
+  .cta .ck2{font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#dff6e6;}
+  .cta h3{font-size:18px;font-weight:800;line-height:1.15;margin-top:3px;}
+  .cta p{font-size:10.4px;line-height:1.45;margin-top:5px;color:#eafaef;}
+  .cta .contact{flex:1;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.28);border-radius:10px;padding:10px 15px;}
+  .cta .crow{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:600;line-height:1.3;}
+  .cta .crow + .crow{margin-top:5px;}
+  .cta .crow svg{flex:none;}
+
+  /* ---------- Footer bar ---------- */
+  .foot{
+    margin-top:auto;border-top:1px solid var(--line);
+    display:flex;align-items:center;justify-content:space-between;
+    padding:8px 0.5in;color:var(--gray);font-size:9.5px;flex:none;
+  }
+  .foot .fb{display:flex;align-items:center;gap:7px;}
+  .foot .fb img{height:15px;width:auto;display:block;}
+  .foot .fname{font-family:'Montserrat',sans-serif;font-weight:700;color:var(--blue-d);font-size:9.8px;letter-spacing:.04em;}
+
+  @media screen and (max-width:900px){ .page{width:100%;} }
+</style>
+</head>
+<body>
+
+<!-- Print Controls (hidden when printing) -->
+<div class="print-controls no-print">
+    <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+    <button class="print-btn secondary" onclick="window.location.href='index.html'">Back to Home</button>
+    <p style="margin-top:10px;color:#4A5568;font-size:14px;font-family:'Inter',sans-serif;">
+        Use your browser's print dialog (Ctrl+P / Cmd+P) to save as PDF. It prints as a single page, sized for email attachments.
+    </p>
+</div>
+
+<section class="page">
+  <div class="topbar"><div class="b"></div><div class="g"></div></div>
+
+  <div class="head">
+    <img class="logo" src="Premier_Logo.png" alt="Premier Industrial Facility Solutions Logo">
+    <div class="head-right">
+      <div class="t1">Industrial &amp; Commercial Facility Sanitation</div>
+      <div class="t2"><a href="tel:+19102325316">(910) 232-5316</a></div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="kick">Your Facility Sanitation Partner</div>
+    <h1>Sanitation Solutions <span class="accent">You Can Trust</span></h1>
+    <p class="sub">Warehouse, food processing, and commercial sanitation programs built around your operation.</p>
+  </div>
+
+  <div class="chiprow">
+    <div class="chip"><span class="ck"><svg class="ic" width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#048C35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>24/7 Spill Response</div>
+    <div class="chip"><span class="ck"><svg class="ic" width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#048C35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Trained &amp; Insured Staff</div>
+    <div class="chip"><span class="ck"><svg class="ic" width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#048C35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Fixed Weekly Pricing</div>
+    <div class="chip"><span class="ck"><svg class="ic" width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#048C35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Compliance-Focused Protocols</div>
+  </div>
+
+  <div class="pad photos">
+    <div class="imgframe"><img src="onepage_warehouse.jpg" alt=""></div>
+    <div class="imgframe"><img src="onepage_processing.jpg" alt=""></div>
+    <div class="imgframe"><img src="onepage_office.jpg" alt=""></div>
+  </div>
+
+  <!-- What We Do -->
+  <div class="pad block">
+    <div class="sec-head"><div class="rule"></div><div class="h-sec">What We Do</div><div class="line"></div></div>
+    <div class="svc-cards">
+      <div class="scard">
+        <div class="st">
+          <span class="si"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M3 21V9l9-5 9 5v12" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M7 21v-7h10v7M7 17.5h10" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg></span>
+          <h3>Warehouse Sanitation</h3>
+        </div>
+        <ul>
+          <li><svg width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#048C35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Deep cleaning of concrete floors, docks &amp; pallet racks</li>
+          <li><svg width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#048C35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Equipment &amp; machinery sanitization</li>
+          <li><svg width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#048C35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>24/7 spill response and cleanup</li>
+        </ul>
+      </div>
+      <div class="scard">
+        <div class="st">
+          <span class="si"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M3 21V11l5 3V11l5 3V5h4l1 9 3 0v7H3z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg></span>
+          <h3>Food Processing Plant Sanitation</h3>
+        </div>
+        <ul>
+          <li><svg width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#048C35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>High-yield pre-ops and dependable start times</li>
+          <li><svg width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#048C35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Site-specific SSOPs and proactive pathogen control</li>
+          <li><svg width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#048C35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Sanitation logs and corrective-action reporting</li>
+        </ul>
+      </div>
+      <div class="scard">
+        <div class="st">
+          <span class="si"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="14" height="18" rx="1" stroke="#fff" stroke-width="2"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4" stroke="#fff" stroke-width="2"/></svg></span>
+          <h3>Office Space Sanitation</h3>
+        </div>
+        <ul>
+          <li><svg width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#048C35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Offices, common areas &amp; high-touch surfaces</li>
+          <li><svg width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#048C35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Break room &amp; restroom cleaning and restocking</li>
+          <li><svg width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#048C35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Scheduled around your business hours</li>
+        </ul>
+      </div>
+      <div class="scard">
+        <div class="st">
+          <span class="si"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="6" r="2" stroke="#fff" stroke-width="2"/><circle cx="10" cy="12" r="2" stroke="#fff" stroke-width="2"/><circle cx="18" cy="18" r="2" stroke="#fff" stroke-width="2"/></svg></span>
+          <h3>Custom Cleaning Programs</h3>
+        </div>
+        <ul>
+          <li><svg width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#048C35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Programs scoped to your facility and schedule</li>
+          <li><svg width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#048C35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Exterior grounds and specialty projects</li>
+          <li><svg width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#048C35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Dedicated supervision &amp; regular QA checks</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- How It Works -->
+  <div class="pad block">
+    <div class="sec-head"><div class="rule"></div><div class="h-sec">How It Works</div><div class="line"></div></div>
+    <div class="steps">
+      <div class="step"><div class="pnum">1</div><div><h4>Facility Walkthrough</h4><p>On-site review of your needs</p></div></div>
+      <div class="arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="#00AE41" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="step"><div class="pnum">2</div><div><h4>Fixed-Price Scope</h4><p>Written scope and weekly rate</p></div></div>
+      <div class="arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="#00AE41" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="step"><div class="pnum">3</div><div><h4>Execution &amp; Tracking</h4><p>Trained crews, verified in our app</p></div></div>
+    </div>
+  </div>
+
+  <!-- Why Premier -->
+  <div class="pad block">
+    <div class="sec-head"><div class="rule"></div><div class="h-sec">Why Premier IFS?</div><div class="line"></div></div>
+    <div class="why-grid">
+      <div class="why"><div><div class="wt">Significant Cost Savings</div><div class="wd">No recruiting, HR, or equipment costs.</div></div></div>
+      <div class="why"><div><div class="wt">Predictable Weekly Rate</div><div class="wd">One flat rate. No surprise invoices.</div></div></div>
+      <div class="why"><div><div class="wt">Food Safety Expertise</div><div class="wd">Food-grade and industrial standards.</div></div></div>
+      <div class="why"><div><div class="wt">Real-Time Accountability</div><div class="wd">Schedules and KPIs tracked in our app.</div></div></div>
+      <div class="why"><div><div class="wt">Supervision &amp; QA</div><div class="wd">Experienced supervisors, regular QA.</div></div></div>
+      <div class="why"><div><div class="wt">Screened &amp; Insured Teams</div><div class="wd">Background-checked and fully insured.</div></div></div>
+    </div>
+  </div>
+
+  <!-- Who We Serve + Compliance -->
+  <div class="pad block">
+    <div class="sec-head"><div class="rule"></div><div class="h-sec">Who We Serve</div><div class="line"></div></div>
+    <div class="ftag-row">
+      <span class="ftag">Food Distribution</span>
+      <span class="ftag">Food Processing</span>
+      <span class="ftag">Cold Storage</span>
+      <span class="ftag">3PL &amp; Fulfillment</span>
+      <span class="ftag">Bottling &amp; Packaging</span>
+      <span class="ftag">Corporate Offices</span>
+    </div>
+    <div class="badges">
+      <div class="badge"><span class="bi"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V5l7-3z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg></span><div><div class="bt">SQF</div><div class="bs">Audit Support</div></div></div>
+      <div class="badge"><span class="bi"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V5l7-3z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg></span><div><div class="bt">BRC</div><div class="bs">Compliant</div></div></div>
+      <div class="badge"><span class="bi"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V5l7-3z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg></span><div><div class="bt">GFSI</div><div class="bs">Audit Support</div></div></div>
+      <div class="badge"><span class="bi"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V5l7-3z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg></span><div><div class="bt">FDA</div><div class="bs">Compliant</div></div></div>
+      <div class="badge"><span class="bi"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V5l7-3z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg></span><div><div class="bt">USDA</div><div class="bs">Compliant</div></div></div>
+      <div class="badge"><span class="bi"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V5l7-3z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg></span><div><div class="bt">OSHA</div><div class="bs">Compliant</div></div></div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <div class="ctl">
+      <div class="ck2">No Cost &middot; No Obligation</div>
+      <h3>Request a Free Facility Walkthrough</h3>
+      <p>We'll assess your facility, learn your sanitation challenges, and deliver a fixed-price scope of work built for your operation.</p>
+    </div>
+    <div class="contact">
+      <div class="crow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg><a href="tel:+19102325316">(910) 232-5316</a></div>
+      <div class="crow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#fff" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg><a href="mailto:info@premier-ifs.com">info@premier-ifs.com</a></div>
+      <div class="crow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.6"/><path d="M3 12h18M12 3c3 3.5 3 14 0 18M12 3c-3 3.5-3 14 0 18" stroke="#fff" stroke-width="1.3"/></svg><a href="https://premier-ifs.com">premier-ifs.com</a></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div class="fb"><img src="Premier LOGO only_no background.png" alt=""><span class="fname">PREMIER INDUSTRIAL FACILITY SOLUTIONS</span></div>
+    <div>Sanitation Solutions You Can Trust</div>
+    <div><a href="https://premier-ifs.com">premier-ifs.com</a></div>
+  </div>
+</section>
+
+</body>
+</html>

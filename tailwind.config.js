@@ -11,7 +11,8 @@ module.exports = {
     "./terms-of-service.html",
     "./sitemap.html",
     "./brochure.html",
-    "./brochure2.html"
+    "./brochure2.html",
+    "./brochure-1page.html"
   ],
   theme: {
     extend: {
