@@ -75,8 +75,9 @@
   /* ---------- Shared ---------- */
   .pad{padding-left:0.55in;padding-right:0.55in;}
   .kicker{
-    font-family:'Montserrat',sans-serif;font-weight:700;font-size:10.5px;
-    letter-spacing:.15em;text-transform:uppercase;color:var(--green-d);
+    font-family:'Montserrat',sans-serif;font-weight:700;font-size:9.5px;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--green-d);
+    display:inline-block;background:var(--green-mist);padding:2px 10px;border-radius:26px;
   }
   .rule{height:3px;width:48px;background:var(--green);border-radius:2px;}
   .h-sec{
@@ -84,7 +85,7 @@
     font-size:18.5px;letter-spacing:-.01em;line-height:1.15;
   }
   .lead{color:var(--gray);font-size:11.5px;line-height:1.5;}
-  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:9px;}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:8px;}
   .sec-head .rule{margin-bottom:3px;}
 
   svg.ic{display:block;flex:none;}
@@ -134,7 +135,7 @@
   }
 
   /* ---------- Overview / two-col ---------- */
-  .section{padding-top:18px;}
+  .section{padding-top:16px;}
   .overview{display:flex;gap:16px;align-items:stretch;}
   .overview .txt{flex:1.35;}
   .overview p{font-size:11.3px;line-height:1.55;color:var(--ink);}
@@ -167,16 +168,16 @@
   .photo .ttl{font-family:'Montserrat',sans-serif;font-weight:700;font-size:10px;color:var(--blue-d);margin:6px 0 2px;}
   .photo svg{opacity:.5;}
 
-  .hero-photo-frame{margin-top:18px;}
-  .hero-photo-frame .photo{aspect-ratio:20/7;}
+  .hero-photo-frame{margin-top:14px;}
+  .hero-photo-frame .photo{aspect-ratio:3/1;}
   .hero-photo-frame .imgframe{
-    aspect-ratio:20/7;width:100%;border-radius:10px;overflow:hidden;
+    aspect-ratio:3/1;width:100%;border-radius:10px;overflow:hidden;
     border:1px solid var(--line);box-shadow:0 6px 18px rgba(5,40,120,.10);
   }
   .hero-photo-frame .imgframe img{width:100%;height:100%;object-fit:cover;display:block;}
 
   /* ---------- Services checklist ---------- */
-  .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 22px;}
+  .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px 22px;}
   .svc{display:flex;gap:9px;align-items:flex-start;}
   .svc .ck{
     flex:none;width:18px;height:18px;border-radius:50%;background:var(--green-mist);
@@ -186,8 +187,8 @@
 
   /* ---------- Callout banner ---------- */
   .callout{
-    margin-top:20px;background:linear-gradient(120deg,var(--green-d),var(--green));color:#fff;
-    border-radius:10px;padding:17px 20px;display:flex;align-items:center;gap:13px;
+    margin-top:17px;background:linear-gradient(120deg,var(--green-d),var(--green));color:#fff;
+    border-radius:10px;padding:15px 20px;display:flex;align-items:center;gap:13px;
   }
   .callout .ic{flex:none;}
   .callout p{font-size:11.3px;line-height:1.48;font-weight:500;}
@@ -197,7 +198,7 @@
   .foot{
     margin-top:auto;border-top:1px solid var(--line);
     display:flex;align-items:center;justify-content:space-between;
-    padding:10px 0.55in;color:var(--gray);font-size:9.3px;flex:none;
+    padding:8px 0.55in;color:var(--gray);font-size:9.3px;flex:none;
   }
   .foot .fb{display:flex;align-items:center;gap:7px;}
   .foot .fb img{height:15px;width:auto;display:block;}
@@ -206,7 +207,7 @@
   /* ================= PAGE 2 specifics ================= */
   .p2-hero{
     background:linear-gradient(120deg,var(--blue) 0%,var(--blue-d) 100%);
-    color:#fff;padding:11px 0.55in 10px;position:relative;overflow:hidden;flex:none;
+    color:#fff;padding:7px 0.55in 6px;position:relative;overflow:hidden;flex:none;
   }
   .p2-hero::after{content:"";position:absolute;left:-55px;bottom:-85px;width:210px;height:210px;border-radius:50%;background:rgba(0,174,65,.18);}
   .p2-hero .kick{color:#bfe0ff;font-weight:700;font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;position:relative;z-index:2;}
@@ -215,7 +216,7 @@
 
   /* process - compact 3-step strip */
   .process-compact{display:flex;gap:10px;margin-top:7px;}
-  .pstep{flex:1;background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 11px;}
+  .pstep{flex:1;background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:9px 11px;}
   .pstep .pnum{
     font-family:'Montserrat',sans-serif;font-weight:800;font-size:10.3px;color:#fff;
     background:linear-gradient(135deg,var(--blue),var(--green));width:21px;height:21px;border-radius:5px;
@@ -236,46 +237,41 @@
 
   /* dashboard mockup */
   .dash-card{border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 6px 16px rgba(14,57,210,.10);background:#fff;}
-  .dash-top{background:var(--blue);color:#fff;padding:8px 11px;display:flex;align-items:center;justify-content:space-between;}
+  .dash-top{background:var(--blue);color:#fff;padding:7px 11px;display:flex;align-items:center;justify-content:space-between;}
   .dash-top .dt{font-family:'Montserrat',sans-serif;font-weight:700;font-size:9px;letter-spacing:.02em;}
   .dash-top .dots{display:flex;gap:4px;}
   .dash-top .dots i{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.45);display:block;}
-  .dash-body{padding:10px 12px;}
-  .dkpi-row{display:flex;gap:7px;margin-bottom:8px;}
-  .dkpi{flex:1;background:var(--soft);border-radius:6px;padding:7px 6px;border:1px solid #eef1f4;text-align:center;}
+  .dash-body{padding:8px 11px;}
+  .dkpi-row{display:flex;gap:7px;margin-bottom:7px;}
+  .dkpi{flex:1;background:var(--soft);border-radius:6px;padding:6px 6px;border:1px solid #eef1f4;text-align:center;}
   .dkpi .n{font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;color:var(--blue-d);line-height:1;}
   .dkpi .n.gr{color:var(--green-d);}
   .dkpi .kl{font-size:7px;color:var(--gray);margin-top:4px;text-transform:uppercase;letter-spacing:.03em;line-height:1.2;}
-  .dbars{display:flex;align-items:flex-end;gap:6px;height:34px;padding-top:2px;}
+  .dbars{display:flex;align-items:flex-end;gap:6px;height:25px;padding-top:2px;}
   .dbars .bar{flex:1;border-radius:2px 2px 0 0;background:var(--blue);}
   .dbars .bar.g{background:var(--green);}
-  .dprog{margin-top:8px;}
-  .dprog .prow{display:flex;align-items:center;gap:6px;margin-bottom:6px;}
+  .dprog{margin-top:7px;}
+  .dprog .prow{display:flex;align-items:center;gap:6px;margin-bottom:4px;}
   .dprog .pl{font-size:7.4px;color:var(--gray);width:76px;flex:none;}
   .dprog .track{flex:1;height:5px;background:#eef1f4;border-radius:3px;overflow:hidden;}
   .dprog .fill{display:block;height:100%;background:var(--green);border-radius:3px;}
 
   /* why-grid */
-  .why-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:6px;}
-  .why{background:#fff;border:1px solid var(--line);border-radius:9px;padding:8px 10px;}
-  .why .wnum{
-    font-family:'Montserrat',sans-serif;font-weight:800;font-size:11px;color:#fff;
-    background:var(--green);width:21px;height:21px;border-radius:6px;
-    display:flex;align-items:center;justify-content:center;margin-bottom:7px;
-  }
-  .why .wt{font-family:'Montserrat',sans-serif;font-weight:700;font-size:10.6px;color:var(--blue-d);line-height:1.2;margin-bottom:4px;}
-  .why .wd{font-size:9.1px;line-height:1.4;color:var(--gray);}
+  .why-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:6px;}
+  .why{background:#fff;border:1px solid var(--line);border-left:3px solid var(--green);border-radius:8px;padding:9px 13px;box-shadow:0 0 0 1px rgba(15,35,65,.04),0 1px 2px rgba(15,35,65,.05);}
+  .why .wt{font-family:'Montserrat',sans-serif;font-weight:700;font-size:12.4px;letter-spacing:-.01em;color:var(--blue-d);line-height:1.25;margin-bottom:5px;}
+  .why .wd{font-size:9.9px;line-height:1.48;color:var(--gray);}
 
   /* facility types served */
   .ftag-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px;}
   .ftag{
     background:var(--blue-mist);border:1px solid #d7e3f6;color:var(--blue-d);
     font-family:'Montserrat',sans-serif;font-weight:700;font-size:10.3px;
-    padding:7px 15px;border-radius:20px;
+    padding:6px 15px;border-radius:20px;
   }
 
   /* compliance badges */
-  .badges{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-top:6px;}
+  .badges{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-top:7px;}
   .badge{display:flex;align-items:center;gap:9px;background:var(--blue-mist);border:1px solid #d7e3f6;border-radius:8px;padding:7px 9px;}
   .badge .bi{flex:none;width:24px;height:24px;border-radius:6px;background:var(--blue);display:flex;align-items:center;justify-content:center;}
   .badge .bt{font-family:'Montserrat',sans-serif;font-weight:700;font-size:10.1px;color:var(--blue-d);line-height:1.15;}
@@ -283,8 +279,8 @@
 
   /* CTA */
   .cta{
-    margin:9px 0.55in 0;background:linear-gradient(120deg,var(--green-d),var(--green));
-    border-radius:12px;padding:14px 19px;color:#fff;display:flex;gap:18px;align-items:center;
+    margin:8px 0.55in 0;background:linear-gradient(120deg,var(--green-d),var(--green));
+    border-radius:12px;padding:12px 19px;color:#fff;display:flex;gap:18px;align-items:center;
   }
   .cta .ctl{flex:1.4;}
   .cta h3{font-size:16.5px;font-weight:800;line-height:1.18;}
@@ -402,7 +398,7 @@
     <h1>Real-Time Visibility. <span class="g">Real Accountability.</span> Better Results.</h1>
   </div>
 
-  <div class="pad" style="padding-top:10px;">
+  <div class="pad" style="padding-top:8px;">
     <div class="sec-head">
       <div>
         <div class="kicker">How We Work</div>
@@ -430,7 +426,7 @@
     </div>
   </div>
 
-  <div class="pad" style="margin-top:12px;">
+  <div class="pad" style="margin-top:7px;">
     <div class="sec-head">
       <div>
         <div class="kicker">Technology &amp; Accountability</div>
@@ -484,7 +480,7 @@
     </div>
   </div>
 
-  <div class="pad" style="margin-top:12px;">
+  <div class="pad" style="margin-top:7px;">
     <div class="sec-head">
       <div>
         <div class="kicker">Why Premier</div>
@@ -493,16 +489,16 @@
       <div class="rule"></div>
     </div>
     <div class="why-grid">
-      <div class="why"><div class="wnum">1</div><div class="wt">Significant Cost Savings</div><div class="wd">Eliminate recruitment, training, HR, and equipment costs entirely.</div></div>
-      <div class="why"><div class="wnum">2</div><div class="wt">Predictable Weekly Pricing</div><div class="wd">One flat rate each week for the full scope of work in your contract - no surprise invoices - easy budgeting.</div></div>
-      <div class="why"><div class="wnum">3</div><div class="wt">Industry Expertise</div><div class="wd">Specialized knowledge of food safety and industrial cleaning standards.</div></div>
-      <div class="why"><div class="wnum">4</div><div class="wt">Compliance-Focused</div><div class="wd">Protocols built around BRC, FDA, USDA, and OSHA guidance.</div></div>
-      <div class="why"><div class="wnum">5</div><div class="wt">Trained &amp; Insured Teams</div><div class="wd">Professional-grade equipment and eco-friendly cleaning solutions.</div></div>
-      <div class="why"><div class="wnum">6</div><div class="wt">Dedicated Support</div><div class="wd">Ongoing supervision, QA checks, and continuous program refinement.</div></div>
+      <div class="why"><div class="wt">Significant Cost Savings</div><div class="wd">Eliminate recruitment, training, HR, and equipment costs entirely.</div></div>
+      <div class="why"><div class="wt">Predictable Weekly Pricing</div><div class="wd">One flat rate each week for the full scope of work in your contract - no surprise invoices - easy budgeting.</div></div>
+      <div class="why"><div class="wt">Industry Expertise</div><div class="wd">Specialized knowledge of food safety and industrial cleaning standards.</div></div>
+      <div class="why"><div class="wt">Compliance-Focused</div><div class="wd">Protocols built around BRC, FDA, USDA, and OSHA guidance.</div></div>
+      <div class="why"><div class="wt">Trained &amp; Insured Teams</div><div class="wd">Professional-grade equipment and eco-friendly cleaning solutions.</div></div>
+      <div class="why"><div class="wt">Dedicated Support</div><div class="wd">Ongoing supervision, QA checks, and continuous program refinement.</div></div>
     </div>
   </div>
 
-  <div class="pad" style="margin-top:12px;">
+  <div class="pad" style="margin-top:7px;">
     <div class="kicker">Who We Serve</div>
     <div class="ftag-row">
       <span class="ftag">Food-Distribution Warehouses</span>

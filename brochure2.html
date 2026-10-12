@@ -75,8 +75,9 @@
   /* ---------- Shared ---------- */
   .pad{padding-left:0.55in;padding-right:0.55in;}
   .kicker{
-    font-family:'Montserrat',sans-serif;font-weight:700;font-size:10.5px;
-    letter-spacing:.15em;text-transform:uppercase;color:var(--green-d);
+    font-family:'Montserrat',sans-serif;font-weight:700;font-size:9.5px;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--green-d);
+    display:inline-block;background:var(--green-mist);padding:2px 10px;border-radius:26px;
   }
   .rule{height:3px;width:48px;background:var(--green);border-radius:2px;}
   .h-sec{
@@ -84,7 +85,7 @@
     font-size:18.5px;letter-spacing:-.01em;line-height:1.15;
   }
   .lead{color:var(--gray);font-size:11.5px;line-height:1.5;}
-  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:7px;}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:8px;}
   .sec-head .rule{margin-bottom:3px;}
 
   svg.ic{display:block;flex:none;}
@@ -134,7 +135,7 @@
   }
 
   /* ---------- Overview / two-col ---------- */
-  .section{padding-top:18px;}
+  .section{padding-top:16px;}
   .overview{display:flex;gap:16px;align-items:stretch;}
   .overview .txt{flex:1.35;}
   .overview p{font-size:11.3px;line-height:1.55;color:var(--ink);}
@@ -156,8 +157,8 @@
   }
   .imgframe img{width:100%;height:100%;object-fit:cover;display:block;}
 
-  .wide-photo-frame{margin-top:11px;}
-  .wide-photo-frame .imgframe{aspect-ratio:2.1/1;}
+  .wide-photo-frame{margin-top:12px;}
+  .wide-photo-frame .imgframe{aspect-ratio:2.4/1;}
 
   /* two-col text + portrait photo */
   .people-grid{display:flex;gap:16px;align-items:stretch;}
@@ -180,8 +181,8 @@
 
   /* ---------- Callout banner ---------- */
   .callout{
-    margin-top:20px;background:linear-gradient(120deg,var(--green-d),var(--green));color:#fff;
-    border-radius:10px;padding:17px 20px;display:flex;align-items:center;gap:13px;
+    margin-top:14px;background:linear-gradient(120deg,var(--green-d),var(--green));color:#fff;
+    border-radius:10px;padding:13px 20px;display:flex;align-items:center;gap:13px;
   }
   .callout .ic{flex:none;}
   .callout p{font-size:11.3px;line-height:1.48;font-weight:500;}
@@ -191,7 +192,7 @@
   .foot{
     margin-top:auto;border-top:1px solid var(--line);
     display:flex;align-items:center;justify-content:space-between;
-    padding:10px 0.55in;color:var(--gray);font-size:9.3px;flex:none;
+    padding:8px 0.55in;color:var(--gray);font-size:9.3px;flex:none;
   }
   .foot .fb{display:flex;align-items:center;gap:7px;}
   .foot .fb img{height:15px;width:auto;display:block;}
@@ -209,7 +210,7 @@
 
   /* process - compact 3-step strip */
   .process-compact{display:flex;gap:10px;margin-top:7px;}
-  .pstep{flex:1;background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:11px 12px;}
+  .pstep{flex:1;background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 12px;}
   .pstep .pnum{
     font-family:'Montserrat',sans-serif;font-weight:800;font-size:10.3px;color:#fff;
     background:linear-gradient(135deg,var(--blue),var(--green));width:21px;height:21px;border-radius:5px;
@@ -219,15 +220,10 @@
   .pstep p{font-size:9.2px;line-height:1.32;color:var(--gray);margin-top:3px;}
 
   /* why-grid */
-  .why-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:8px;}
-  .why{background:#fff;border:1px solid var(--line);border-radius:9px;padding:9px 10px;}
-  .why .wnum{
-    font-family:'Montserrat',sans-serif;font-weight:800;font-size:11px;color:#fff;
-    background:var(--green);width:21px;height:21px;border-radius:6px;
-    display:flex;align-items:center;justify-content:center;margin-bottom:7px;
-  }
-  .why .wt{font-family:'Montserrat',sans-serif;font-weight:700;font-size:10.6px;color:var(--blue-d);line-height:1.2;margin-bottom:4px;}
-  .why .wd{font-size:9.1px;line-height:1.4;color:var(--gray);}
+  .why-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:7px;}
+  .why{background:#fff;border:1px solid var(--line);border-left:3px solid var(--green);border-radius:8px;padding:12px 14px;box-shadow:0 0 0 1px rgba(15,35,65,.04),0 1px 2px rgba(15,35,65,.05);}
+  .why .wt{font-family:'Montserrat',sans-serif;font-weight:700;font-size:12.4px;letter-spacing:-.01em;color:var(--blue-d);line-height:1.25;margin-bottom:5px;}
+  .why .wd{font-size:9.9px;line-height:1.48;color:var(--gray);}
 
   /* facility types served */
   .ftag-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:9px;}
@@ -238,7 +234,7 @@
   }
 
   /* compliance badges */
-  .badges{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:6px;}
+  .badges{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:7px;}
   .badge{display:flex;align-items:center;gap:9px;background:var(--blue-mist);border:1px solid #d7e3f6;border-radius:8px;padding:7px 9px;}
   .badge .bi{flex:none;width:24px;height:24px;border-radius:6px;background:var(--blue);display:flex;align-items:center;justify-content:center;}
   .badge .bt{font-family:'Montserrat',sans-serif;font-weight:700;font-size:10.1px;color:var(--blue-d);line-height:1.15;}
@@ -246,8 +242,8 @@
 
   /* CTA */
   .cta{
-    margin:12px 0.55in 0;background:linear-gradient(120deg,var(--green-d),var(--green));
-    border-radius:12px;padding:14px 19px;color:#fff;display:flex;gap:18px;align-items:center;
+    margin:10px 0.55in 0;background:linear-gradient(120deg,var(--green-d),var(--green));
+    border-radius:12px;padding:13px 19px;color:#fff;display:flex;gap:18px;align-items:center;
   }
   .cta .ctl{flex:1.4;}
   .cta h3{font-size:16.5px;font-weight:800;line-height:1.18;}
@@ -320,7 +316,7 @@
   </div>
 
   <div class="pad section" style="margin-top:2px;">
-    <div class="callout" style="margin-top:0;padding:14px 18px;">
+    <div class="callout" style="margin-top:2px;padding:17px 18px;">
       <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V5l7-3z" stroke="#fff" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 12l2 2 4-4.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       <p><strong>Partnering with Premier IFS means more than a clean plant.</strong> It means brand protection, uninterrupted production, and total regulatory confidence.</p>
     </div>
@@ -363,7 +359,7 @@
     <h1>Expert Hands. <span class="g">Proven Process.</span> Total Confidence.</h1>
   </div>
 
-  <div class="pad" style="padding-top:10px;">
+  <div class="pad" style="padding-top:9px;">
     <div class="sec-head">
       <div>
         <div class="kicker">How We Work</div>
@@ -391,7 +387,7 @@
     </div>
   </div>
 
-  <div class="pad" style="margin-top:14px;">
+  <div class="pad" style="margin-top:11px;">
     <div class="sec-head">
       <div>
         <div class="kicker">What We Deliver</div>
@@ -401,16 +397,16 @@
     </div>
 
     <div class="why-grid" style="margin-top:2px;">
-      <div class="why"><div class="wnum">1</div><div class="wt">Site-Specific SSOPs</div><div class="wd">Detailed procedures for the hard-to-clean niche areas where pathogens hide.</div></div>
-      <div class="why"><div class="wnum">2</div><div class="wt">Chemical Discipline</div><div class="wd">Precise titration and application that protects equipment and maximizes efficacy.</div></div>
-      <div class="why"><div class="wnum">3</div><div class="wt">High-Standard Pre-Ops</div><div class="wd">Consistent results that minimize re-cleans and keep start times predictable.</div></div>
-      <div class="why"><div class="wnum">4</div><div class="wt">Transparent Documentation</div><div class="wd">Rigorous sanitation logs and corrective-action reports for full traceability.</div></div>
-      <div class="why"><div class="wnum">5</div><div class="wt">Continuous Improvement</div><div class="wd">Procedures reviewed and updated as equipment and plant conditions change.</div></div>
-      <div class="why"><div class="wnum">6</div><div class="wt">Sanitary Design Awareness</div><div class="wd">Trained eyes that catch maintenance issues before they become risks.</div></div>
+      <div class="why"><div class="wt">Site-Specific SSOPs</div><div class="wd">Detailed procedures for the hard-to-clean niche areas where pathogens hide.</div></div>
+      <div class="why"><div class="wt">Chemical Discipline</div><div class="wd">Precise titration and application that protects equipment and maximizes efficacy.</div></div>
+      <div class="why"><div class="wt">High-Standard Pre-Ops</div><div class="wd">Consistent results that minimize re-cleans and keep start times predictable.</div></div>
+      <div class="why"><div class="wt">Transparent Documentation</div><div class="wd">Rigorous sanitation logs and corrective-action reports for full traceability.</div></div>
+      <div class="why"><div class="wt">Continuous Improvement</div><div class="wd">Procedures reviewed and updated as equipment and plant conditions change.</div></div>
+      <div class="why"><div class="wt">Sanitary Design Awareness</div><div class="wd">Trained eyes that catch maintenance issues before they become risks.</div></div>
     </div>
   </div>
 
-  <div class="pad" style="margin-top:14px;">
+  <div class="pad" style="margin-top:11px;">
     <div class="sec-head">
       <div>
         <div class="kicker">Our People</div>
